@@ -22,7 +22,7 @@ public class InvaildLogin extends PageInitializer {
     public void user_logs_in_with_invaild_credentials_username_and_password(String userName, String password) {
         loginPage.userNameTextBox.sendKeys(userName);
         loginPage.passwordTextBox.sendKeys(password);
-        loginPage.signInBtn.click();
+        loginPage.signButton.click();
     }
 
     @Then("user sees invalid message {string}")
