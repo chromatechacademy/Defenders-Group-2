@@ -1,23 +1,17 @@
 package com.chroma.stepDefinitions;
-
 import com.chroma.appsCommon.PageInitializer;
-import com.chroma.pages.AcademyDashBoardPage;
-import com.chroma.pages.LoginPage;
 import com.chroma.utils.CucumberLogUtils;
 import com.chroma.web.CommonUtils;
-
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
-public class HumanResourceModule extends PageInitializer {
-    AcademyDashBoardPage academyDashBoardPage = new AcademyDashBoardPage();
-    LoginPage loginPage = new LoginPage();
+public class HumanResourceModuleStepDef extends PageInitializer{
 
     @Given("user logs in with valid credentials username {string} and password {string}")
-    public void user_logs_in_with_valid_credentials_username_and_password(String Username, String Password)
+    public void user_logs_in_with_valid_credentials_username_and_password(String username, String password)
             throws InterruptedException {
-                loginPage.userNameTextBox.sendKeys(Username);
-                loginPage.passwordTextBox.sendKeys(Password);
+                loginPage.userNameTextBox.sendKeys(username);
+                loginPage.passwordTextBox.sendKeys(password);
                 CucumberLogUtils.logExtentScreenshot();
                 loginPage.signButton.click();
     }
@@ -48,6 +42,5 @@ public class HumanResourceModule extends PageInitializer {
                 CommonUtils.assertEquals(department, departmentSubModule);
                 String designationSubModule = academyDashBoardPage.designationSubModule.getText();
                 CommonUtils.assertEquals(designation, designationSubModule);
-                
     }
 }

@@ -1,14 +1,10 @@
 package com.chroma.stepDefinitions;
-
 import com.chroma.appsCommon.PageInitializer;
-import com.chroma.pages.RealEstateLoginPage;
 import com.chroma.web.WebDriverUtils;
-
 import cucumber.api.java.en.Given;
 
-public class RealEstateDashboardTextAndTabs extends PageInitializer {
-    RealEstateLoginPage realEstateLoginPage = new RealEstateLoginPage();
-
+public class RealEstateDashboardTextAndTabsStepDef extends PageInitializer {
+    
     @Given("a real estate admin is on the login page {string}")
     public void a_real_estate_admin_is_on_the_login_page(String url) {
         WebDriverUtils.driver.get(url);

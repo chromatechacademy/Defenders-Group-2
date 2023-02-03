@@ -1,17 +1,12 @@
 package com.chroma.stepDefinitions;
-
-import org.testng.asserts.SoftAssert;
-
 import com.chroma.appsCommon.PageInitializer;
-import com.chroma.pages.LoginPage;
+import com.chroma.web.CommonUtils;
 import com.chroma.web.WebDriverUtils;
-
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class InvaildLogin extends PageInitializer {
-    LoginPage loginPage = new LoginPage();
+public class InvaildLoginStepDef extends PageInitializer {
 
     @Given("a user is on the login page {string}")
     public void a_user_is_on_the_login_page(String url) {
@@ -27,8 +22,7 @@ public class InvaildLogin extends PageInitializer {
 
     @Then("user sees invalid message {string}")
     public void user_sees_invalid_message(String invalidUsernameOrPassword) {
-        SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(loginPage.invaildLoginMessage, invalidUsernameOrPassword);
+        String actualInvalidMessage = loginPage.invaildLoginMessage.getText();
+        CommonUtils.assertEquals(invalidUsernameOrPassword, actualInvalidMessage);
     }
-
 }

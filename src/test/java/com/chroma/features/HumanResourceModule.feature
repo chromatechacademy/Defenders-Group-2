@@ -1,7 +1,7 @@
 Feature: Human Resource Module Test Scenario
 Description: Testing Human Resource Module
 
-@Progression @Samuel
+@CTSMSRegression @Samuel @DG2-9
 Scenario: Human Resource Module 
 Given a user is on the login page "https://chroma.mexil.it/site/login"
 And user logs in with valid credentials username "general@teacher.com" and password "123456"

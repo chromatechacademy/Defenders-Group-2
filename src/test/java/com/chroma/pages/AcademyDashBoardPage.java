@@ -1,13 +1,10 @@
 package com.chroma.pages;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.chroma.web.WebDriverUtils;
 
 public class AcademyDashBoardPage {
-
     /* Human Resource Module */
     @FindBy(xpath = "//span[normalize-space()='Human Resource']")
     public WebElement humanResourceModule;
@@ -47,7 +44,6 @@ public class AcademyDashBoardPage {
     /* Designation Sub Module */
     @FindBy(xpath = "//a[normalize-space()='Designation']")
     public WebElement designationSubModule;
-
 
     public AcademyDashBoardPage(){
         PageFactory.initElements(WebDriverUtils.driver, this);
