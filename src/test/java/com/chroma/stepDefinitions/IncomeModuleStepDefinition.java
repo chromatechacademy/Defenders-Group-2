@@ -55,7 +55,8 @@ public class IncomeModuleStepDefinition {
         String actuaIncomeHeadModuelText = incomemodulePage.IncomeHeadModule.getText();
         CommonUtils.assertEquals(actuaIncomeHeadModuelText, IncomeHead);
 
-       
+        CucumberLogUtils.logExtentScreenshot();
+        
 
     }
     
