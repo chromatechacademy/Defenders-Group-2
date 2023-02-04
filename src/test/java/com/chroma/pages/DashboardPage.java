@@ -16,6 +16,10 @@ public class DashboardPage {
     @FindBy(xpath = "//a[normalize-space()='Sections']")
     public WebElement sectionsSubModule;
 
+    /* CLASS SUBMODULE */
+    @FindBy(xpath = "//a[normalize-space()='Class']")
+    public WebElement classSubModule;
+
     public DashboardPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
     }

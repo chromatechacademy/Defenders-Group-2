@@ -11,7 +11,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class AddDeleteSections {
+public class AddDeleteSectionsStepDef {
 
     DashboardPage dashboardPage = new DashboardPage();
     LoginPage loginPage = new LoginPage();
@@ -61,11 +61,13 @@ public class AddDeleteSections {
     }
 
     @Then("Chroma Tech faculty member selects section name {string} in Section List and delete it")
-    public void chroma_Tech_faculty_member_selects_section_name_in_Section_List_and_delete_it(String sectionName) {
+    public void chroma_Tech_faculty_member_selects_section_name_in_Section_List_and_delete_it(String sectionName) throws InterruptedException {
 
         if (SectionsPage.sectionNameLocator(sectionName).size() != 0) {
             SectionsPage.sectionsNameDeleteButton(sectionName).click();
+            Thread.sleep(1000);
             WebDriverUtils.driver.switchTo().alert().accept();
+            Thread.sleep(1000);
         } else {
 
         }
