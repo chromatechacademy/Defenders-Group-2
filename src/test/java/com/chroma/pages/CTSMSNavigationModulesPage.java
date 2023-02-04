@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.chroma.web.WebDriverUtils;
 
-public class DashboardModulesPage {
+public class CTSMSNavigationModulesPage {
 
     @FindBy(xpath = "//span[contains(text(),'Student Information')]")
     public WebElement studentInformationModule;
@@ -38,7 +38,7 @@ public class DashboardModulesPage {
         return WebDriverUtils.driver.findElement(By.xpath("//*[contains(text(),'" + text + "')]"));
     }
 
-    public DashboardModulesPage() {
+    public CTSMSNavigationModulesPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
     }
 
