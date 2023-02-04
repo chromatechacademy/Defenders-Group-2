@@ -2,6 +2,7 @@ package com.chroma.appsCommon;
 import com.chroma.pages.AcademyDashBoardPage;
 import com.chroma.pages.DashboardPage;
 import com.chroma.pages.LoginPage;
+import com.chroma.pages.RealEstateDashboardPage;
 import com.chroma.pages.RealEstateLoginPage;
 import com.chroma.pages.SamplePage;
 import com.chroma.web.WebDriverUtils;
@@ -15,6 +16,7 @@ public class PageInitializer extends WebDriverUtils {
     public static DashboardPage dashboardPage;
     public static LoginPage loginPage;
     public static RealEstateLoginPage realEstateLoginPage;
+    public static RealEstateDashboardPage realEstateDashboardPage;
 
     public void initializeAllPages() {
 
@@ -23,6 +25,7 @@ public class PageInitializer extends WebDriverUtils {
         dashboardPage = new DashboardPage();
         loginPage = new LoginPage();
         realEstateLoginPage = new RealEstateLoginPage();
+        realEstateDashboardPage = new RealEstateDashboardPage();
 
     }
 
