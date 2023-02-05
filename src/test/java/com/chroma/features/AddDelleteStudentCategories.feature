@@ -1,6 +1,6 @@
 Feature: CTSMS  Ability to add and delete student categories
 
-    @CTSMSProgression @Natalya @DG2-20
+    @CTSMSRegression @Natalya @DG2-20
     Scenario Outline: Ability to add and delete student categories
         Given a user is on the login page "https://chroma.mexil.it/site/login"
         When user logs in with valid credentials username "general@teacher.com" and password "123456"
