@@ -45,7 +45,6 @@ public class AddDeleteCategoriesStepDef extends PageInitializer {
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
         CommonUtils.sleep(1000);
-
     }
 
     @Then("user clicks on the Category {string} Delete button")
