@@ -26,6 +26,5 @@ public class DashboardStepDef extends PageInitializer {
         CommonUtils.assertEquals(actualHomeworkModuleText, homework);
         String actualReportsModuleText = cTSMSNavigationModulesPage.reportsModule.getText();
         CommonUtils.assertEquals(actualReportsModuleText, reports);
-
     }
 }

@@ -13,7 +13,6 @@ import com.chroma.web.WebDriverUtils;
 public class PageInitializer extends WebDriverUtils {
 
     // Sample of instantiating an instance
-
     public static SamplePage samplePage;
     public static AcademyDashBoardPage academyDashBoardPage;
     public static DashboardPage dashboardPage;
@@ -33,6 +32,5 @@ public class PageInitializer extends WebDriverUtils {
         cTSMSNavigationModulesPage = new CTSMSNavigationModulesPage();
         cTSMSStudentAdmissionPage = new CTSMSStudentAdmissionPage();
         realEstateDashboardPage = new RealEstateDashboardPage();
-
     }
 }
