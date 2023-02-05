@@ -1,7 +1,6 @@
 Feature: Student Admission
 
     @CTSMSProgression @Natalya @DG2-12
-
     Scenario Outline: Student Admission
         Given a user is on the login page "<URL>"
         When user logs in with valid credentials username "<USERNAME>" and password "<PASSWORD>"
