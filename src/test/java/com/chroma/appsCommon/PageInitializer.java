@@ -31,5 +31,4 @@ public class PageInitializer extends WebDriverUtils {
         cTSMSNavigationModulesPage = new CTSMSNavigationModulesPage();
         cTSMSStudentAdmissionPage = new CTSMSStudentAdmissionPage();
     }
-
 }

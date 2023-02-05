@@ -40,5 +40,4 @@ public class CTSMSNavigationModulesPage {
     public CTSMSNavigationModulesPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
     }
-
 }

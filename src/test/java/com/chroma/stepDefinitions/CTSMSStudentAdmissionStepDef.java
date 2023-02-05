@@ -4,7 +4,6 @@ import com.chroma.appsCommon.PageInitializer;
 import com.chroma.utils.CucumberLogUtils;
 import com.chroma.web.CommonUtils;
 import com.chroma.web.JavascriptUtils;
-
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -67,7 +66,6 @@ public class CTSMSStudentAdmissionStepDef extends PageInitializer {
     @Then("enters Guardian Phone Number {string}")
     public void enters_Guardian_Phone_Number(String phoneNumber) {
         cTSMSStudentAdmissionPage.guardianPhoneNumberTextBox.sendKeys(phoneNumber);
-        
     }
 
     @Then("clicks on the Save button")
@@ -76,12 +74,12 @@ public class CTSMSStudentAdmissionStepDef extends PageInitializer {
     }
 
     @Then("student is succesfuly saved and confirmation message is displayed {string}")
-    public void student_is_succesfuly_saved_and_confirmation_message_is_displayed(String expectedSuccessMessage) throws InterruptedException {
+    public void student_is_succesfuly_saved_and_confirmation_message_is_displayed(String expectedSuccessMessage)
+            throws InterruptedException {
         String actualSuccessMessage = cTSMSStudentAdmissionPage.succesfulySavedMessage.getText();
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
         CommonUtils.assertEquals(actualSuccessMessage, expectedSuccessMessage);
-        Thread.sleep(2000);   
+        Thread.sleep(2000);
     }
-
 }

@@ -1,5 +1,5 @@
-
 Feature: CTSMS Navigation Module
+
    @CTSMSRegression @Natalya @DG2-3
   Scenario: Navigation modules on portal
     Given Chroma Tech Academy teacher/admin is on a login page "https://chroma.mexil.it/site/login"
