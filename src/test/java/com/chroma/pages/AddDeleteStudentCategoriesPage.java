@@ -4,10 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.chroma.web.CommonUtils;
 import com.chroma.web.WebDriverUtils;
-
 
 
 public class AddDeleteStudentCategoriesPage {
@@ -26,8 +24,6 @@ public class AddDeleteStudentCategoriesPage {
 
     @FindBy(xpath = "//div[@class='alert alert-success text-left']") 
     public WebElement categorySavedSuccesfullyText;
-
-   
 
     public static WebElement categoryDeleteLocator(String categoryNameText) { 
         return WebDriverUtils.driver.findElement(By.xpath("//td[normalize-space()='" + categoryNameText 

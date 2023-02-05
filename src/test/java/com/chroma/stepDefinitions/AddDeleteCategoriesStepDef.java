@@ -4,7 +4,6 @@ import com.chroma.appsCommon.PageInitializer;
 import com.chroma.pages.AddDeleteStudentCategoriesPage;
 import com.chroma.utils.CucumberLogUtils;
 import com.chroma.web.CommonUtils;
-
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -18,7 +17,6 @@ public class AddDeleteCategoriesStepDef extends PageInitializer {
     @When("user selects Student categories")
     public void user_selects_Student_categories() {
         addDeleteStudentCategoriesPage.studentCategories.click();
-
     }
 
     @Then("user is directed to Category page with the text {string}")
