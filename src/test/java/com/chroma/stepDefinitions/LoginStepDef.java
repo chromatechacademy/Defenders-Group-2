@@ -34,5 +34,4 @@ public class LoginStepDef extends PageInitializer {
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
     }
-
 }

@@ -78,5 +78,7 @@ public class RealEstateDeleteAgentStepDef extends PageInitializer {
         RealEstateInactiveAgentsPage.agentDeleteButton(email).click();
         String actualDeleteSuccess = realEstateInactiveAgentsPage.assertElement.getText();
         CommonUtils.assertEquals(deleteSuccess, actualDeleteSuccess);
+        CucumberLogUtils.logExtentScreenshot();
+        CucumberLogUtils.logScreenShot();
     }
 }
