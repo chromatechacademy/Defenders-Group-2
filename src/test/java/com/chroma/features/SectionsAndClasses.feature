@@ -1,6 +1,6 @@
 Feature: as a Chroma Tech Academy teacher/admin you will be able to see Two classes, SDET and Cyber Security should be displayed with sections
 
-  @Smoke @IToropov
+  @CTSMSRegression @IToropov @DG2-11
   Scenario: As a Chroma Tech Academy teacher/admin, I should be able to login with valid credentials
     Given Chroma Tech Academy teacher/admin is on a login page "https://chroma.mexil.it/site/login"
     When Chroma Tech Academy teacher/admin logs in with valid credentials username "general@teacher.com" and password "123456"

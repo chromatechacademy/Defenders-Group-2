@@ -4,7 +4,6 @@ import com.chroma.pages.DashboardPage;
 import com.chroma.pages.SectionsAndClassesPage;
 import com.chroma.utils.CucumberLogUtils;
 import com.chroma.web.CommonUtils;
-
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 

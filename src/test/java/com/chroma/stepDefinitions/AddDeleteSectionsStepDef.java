@@ -6,7 +6,6 @@ import com.chroma.pages.SectionsPage;
 import com.chroma.utils.CucumberLogUtils;
 import com.chroma.web.CommonUtils;
 import com.chroma.web.WebDriverUtils;
-
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -61,7 +60,8 @@ public class AddDeleteSectionsStepDef {
     }
 
     @Then("Chroma Tech faculty member selects section name {string} in Section List and delete it")
-    public void chroma_Tech_faculty_member_selects_section_name_in_Section_List_and_delete_it(String sectionName) throws InterruptedException {
+    public void chroma_Tech_faculty_member_selects_section_name_in_Section_List_and_delete_it(String sectionName)
+            throws InterruptedException {
 
         if (SectionsPage.sectionNameLocator(sectionName).size() != 0) {
             SectionsPage.sectionsNameDeleteButton(sectionName).click();
