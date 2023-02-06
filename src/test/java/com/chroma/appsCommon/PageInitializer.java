@@ -5,6 +5,7 @@ import com.chroma.pages.CTSMSStudentAdmissionPage;
 import com.chroma.pages.AcademyDashBoardPage;
 import com.chroma.pages.DashboardPage;
 import com.chroma.pages.LoginPage;
+import com.chroma.pages.RealEstateAgentsPage;
 import com.chroma.pages.RealEstateDashboardPage;
 import com.chroma.pages.RealEstateLoginPage;
 import com.chroma.pages.RealEstateProjectsPage;
@@ -23,6 +24,7 @@ public class PageInitializer extends WebDriverUtils {
     public static CTSMSStudentAdmissionPage cTSMSStudentAdmissionPage;
     public static RealEstateDashboardPage realEstateDashboardPage;
     public static RealEstateProjectsPage realEstateProjectsPage;
+    public static RealEstateAgentsPage realEstateAgentsPage;
 
     public void initializeAllPages() {
 
@@ -35,5 +37,6 @@ public class PageInitializer extends WebDriverUtils {
         cTSMSStudentAdmissionPage = new CTSMSStudentAdmissionPage();
         realEstateDashboardPage = new RealEstateDashboardPage();
         realEstateProjectsPage = new RealEstateProjectsPage();
+        realEstateAgentsPage = new RealEstateAgentsPage();
     }
 }

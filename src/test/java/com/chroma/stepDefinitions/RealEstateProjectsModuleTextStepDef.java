@@ -1,10 +1,11 @@
 package com.chroma.stepDefinitions;
 import com.chroma.appsCommon.PageInitializer;
+import com.chroma.utils.CucumberLogUtils;
 import com.chroma.web.CommonUtils;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
-public class RealEstateProjectsModuleText extends PageInitializer {
+public class RealEstateProjectsModuleTextStepDef extends PageInitializer {
     @Given("admin navigates to {string} page")
     public void admin_navigates_to_page(String projects) {
         realEstateDashboardPage.projectsTab.click();
@@ -21,5 +22,6 @@ public class RealEstateProjectsModuleText extends PageInitializer {
                 CommonUtils.assertEquals(active, actualActiveModule);
                 String actualArchivedModule = realEstateProjectsPage.archivedModule.getText();
                 CommonUtils.assertEquals(archived, actualArchivedModule);
+                CucumberLogUtils.logExtentScreenshot();
     }
 }
