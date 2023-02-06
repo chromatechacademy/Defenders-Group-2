@@ -1,5 +1,4 @@
 package com.chroma.pages;
 
-public class RealEstateSoldByReservedByPage {
-    
+public class RealEstateSoldByReservedByPage {   
 }
