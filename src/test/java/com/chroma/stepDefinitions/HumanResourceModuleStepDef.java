@@ -12,8 +12,8 @@ public class HumanResourceModuleStepDef extends PageInitializer{
             throws InterruptedException {
                 loginPage.userNameTextBox.sendKeys(username);
                 loginPage.passwordTextBox.sendKeys(password);
-                CucumberLogUtils.logExtentScreenshot();
                 loginPage.signButton.click();
+                CucumberLogUtils.logExtentScreenshot();
     }
 
     @Given("navigates to Human Resource")
@@ -42,5 +42,6 @@ public class HumanResourceModuleStepDef extends PageInitializer{
                 CommonUtils.assertEquals(department, departmentSubModule);
                 String designationSubModule = academyDashBoardPage.designationSubModule.getText();
                 CommonUtils.assertEquals(designation, designationSubModule);
+                CucumberLogUtils.logExtentScreenshot();
     }
 }
