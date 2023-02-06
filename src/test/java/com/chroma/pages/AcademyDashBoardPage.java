@@ -9,6 +9,10 @@ public class AcademyDashBoardPage {
     @FindBy(xpath = "//span[normalize-space()='Human Resource']")
     public WebElement humanResourceModule;
 
+    /* Expenses Module */
+    @FindBy(xpath = "//span[normalize-space()='Expenses']")
+    public WebElement expensesModule;
+
     /* Staff Directory Sub Module */
     @FindBy(xpath = "//ul[contains(@class,'treeview-menu menu-open')]//a[normalize-space()='Staff Directory']")
     public WebElement staffDirectorySubModule;
@@ -44,6 +48,18 @@ public class AcademyDashBoardPage {
     /* Designation Sub Module */
     @FindBy(xpath = "//a[normalize-space()='Designation']")
     public WebElement designationSubModule;
+    
+    /* Add Expense Sub Module */
+    @FindBy(xpath = "//ul[contains(@class,'treeview-menu menu-open')]//a[normalize-space()='Add Expense']")
+    public WebElement addExpenseSubModule;
+
+    /* Search Expense Sub Module */
+    @FindBy(xpath = "//a[normalize-space()='Search Expense']")
+    public WebElement searchExpenseSubModule;
+
+    /* Expense Head Sub Module */
+    @FindBy(xpath = "//a[normalize-space()='Expense Head']")
+    public WebElement expenseHeadSubModule;
 
     public AcademyDashBoardPage(){
         PageFactory.initElements(WebDriverUtils.driver, this);
