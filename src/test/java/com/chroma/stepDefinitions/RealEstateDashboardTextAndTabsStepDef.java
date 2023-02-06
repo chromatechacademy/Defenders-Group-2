@@ -1,12 +1,8 @@
 package com.chroma.stepDefinitions;
 
 import com.chroma.appsCommon.PageInitializer;
-import com.chroma.utils.CucumberLogUtils;
-import com.chroma.web.CommonUtils;
-import com.chroma.web.JavascriptUtils;
 import com.chroma.web.WebDriverUtils;
 import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
 
 public class RealEstateDashboardTextAndTabsStepDef extends PageInitializer {
 

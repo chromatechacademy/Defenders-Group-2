@@ -1,7 +1,5 @@
 package com.chroma.runners;
 
-import org.apache.commons.io.filefilter.FalseFileFilter;
-
 import org.junit.runner.RunWith;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
