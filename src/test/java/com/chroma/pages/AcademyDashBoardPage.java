@@ -61,6 +61,39 @@ public class AcademyDashBoardPage {
     @FindBy(xpath = "//a[normalize-space()='Expense Head']")
     public WebElement expenseHeadSubModule;
 
+    /* Class Timetable Sub Module */
+    @FindBy(xpath = "//a[@href='https://chroma.mexil.it/admin/timetable/classreport']")
+    public WebElement classTimeTableSubModule;
+
+    /* Teachers Timetable Sub Module */
+    @FindBy(xpath = "//a[normalize-space()='Teachers Timetable']")
+    public WebElement teachersTimetableSubModule;
+
+    /* Assign Class Teacher Sub Module*/
+    @FindBy(xpath = "//a[normalize-space()='Assign Class Teacher']")
+    public WebElement assignClassTeacherSubModule;
+
+    /* Promote Students Sub Module */
+    @FindBy(xpath = "//a[normalize-space()='Promote Students']")
+    public WebElement promoteStudentsSubModule;
+
+    /* Subject Group Sub Module */
+    @FindBy(xpath = "//a[normalize-space()='Subject Group']")
+    public WebElement subjectGroupSubModule;
+
+    /* Subjects Sub Module */
+    @FindBy(xpath = "//a[normalize-space()='Subjects']")
+    public WebElement subjectsSubModule;
+
+    /* Class Sub Module */
+    @FindBy(xpath = "//a[normalize-space()='Class']")
+    public WebElement classSubModule;
+
+    /*Sections Sub Module */
+    @FindBy(xpath = "//a[normalize-space()='Sections']")
+    public WebElement sectionsSubModule;
+
+
     public AcademyDashBoardPage(){
         PageFactory.initElements(WebDriverUtils.driver, this);
     }
