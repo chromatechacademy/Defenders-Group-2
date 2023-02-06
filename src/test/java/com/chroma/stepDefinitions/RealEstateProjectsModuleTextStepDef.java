@@ -17,12 +17,16 @@ public class RealEstateProjectsModuleTextStepDef extends PageInitializer {
             String archived) {
                 String actualAddNewProjectModule = realEstateProjectsPage.addNewProjectModule.getText();
                 CommonUtils.assertEquals(addNewProject, actualAddNewProjectModule);
+
                 String actualProjectsModule = realEstateProjectsPage.projectsModule.getText();
                 CommonUtils.assertEquals(projects, actualProjectsModule);
+
                 String actualActiveModule = realEstateProjectsPage.activeModule.getText();
                 CommonUtils.assertEquals(active, actualActiveModule);
+
                 String actualArchivedModule = realEstateProjectsPage.archivedModule.getText();
                 CommonUtils.assertEquals(archived, actualArchivedModule);
+                
                 CucumberLogUtils.logExtentScreenshot();
     }
 }
