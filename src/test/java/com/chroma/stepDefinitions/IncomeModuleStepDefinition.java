@@ -56,6 +56,7 @@ public class IncomeModuleStepDefinition {
         CommonUtils.assertEquals(actuaIncomeHeadModuelText, IncomeHead);
 
         CucumberLogUtils.logExtentScreenshot();
+        CucumberLogUtils.logScreenShot();
         
 
     }
