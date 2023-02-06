@@ -21,4 +21,4 @@ Feature: Student Admission
         Examples:
 
             | URL                                | USERNAME            | PASSWORD | ADMISSION NUMBER | CLASS | SECTION              | FIRST NAME | LAST NAME | GENDER | DOB        | MOTHERS NAME | GUARDIAN PHONE NUMBER |
-            | https://chroma.mexil.it/site/login | general@teacher.com | 123456   | 879345           | SDET  | Testing Fundamentals | Nata       | TECH      | Female | 04/01/1987 | CHROMA MOM   | 7036875816            |
+            | https://chroma.mexil.it/site/login | general@teacher.com | 123456   | 879343           | SDET  | Testing Fundamentals | Nata       | TECH      | Female | 04/01/1987 | CHROMA MOM   | 7036875816            |
