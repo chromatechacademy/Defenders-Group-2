@@ -29,10 +29,8 @@ public class PageInitializer extends WebDriverUtils {
     public static RealEstateNewAgentWindowPage realEstateNewAgentWindowPage;
     public static RealEstateActiveAgentsPage realEstateActiveAgentsPage;
     public static RealEstateInactiveAgentsPage realEstateInactiveAgentsPage;
-
     public static CTSMSNavigationModulesPage cTSMSNavigationModulesPage;
     public static CTSMSStudentAdmissionPage cTSMSStudentAdmissionPage;
-    public static RealEstateDashboardPage realEstateDashboardPage;
     public static AddDeleteStudentCategoriesPage addDeleteStudentCategoriesPage;
     public static RealEstateAgentPage realEstateAgentPage;
 
@@ -43,13 +41,11 @@ public class PageInitializer extends WebDriverUtils {
         dashboardPage = new DashboardPage();
         loginPage = new LoginPage();
         realEstateLoginPage = new RealEstateLoginPage();
-
         realEstateDashboardPage = new RealEstateDashboardPage();
         realEstateAgentsPage = new RealEstateAgentsPage();
         realEstateNewAgentWindowPage = new RealEstateNewAgentWindowPage();
         realEstateActiveAgentsPage = new RealEstateActiveAgentsPage();
         realEstateInactiveAgentsPage = new RealEstateInactiveAgentsPage();
-
         cTSMSNavigationModulesPage = new CTSMSNavigationModulesPage();
         cTSMSStudentAdmissionPage = new CTSMSStudentAdmissionPage();
         realEstateDashboardPage = new RealEstateDashboardPage();
