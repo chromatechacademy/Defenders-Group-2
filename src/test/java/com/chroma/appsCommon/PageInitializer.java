@@ -4,10 +4,13 @@ import com.chroma.pages.CTSMSNavigationModulesPage;
 import com.chroma.pages.CTSMSStudentAdmissionPage;
 import com.chroma.pages.AcademyDashBoardPage;
 import com.chroma.pages.DashboardPage;
+import com.chroma.pages.FeesCollectionModulePage;
+import com.chroma.pages.HomeworkModulePage;
 import com.chroma.pages.LoginPage;
 import com.chroma.pages.RealEstateDashboardPage;
 import com.chroma.pages.RealEstateLoginPage;
 import com.chroma.pages.SamplePage;
+import com.chroma.pages.StudentInformationPage;
 import com.chroma.web.WebDriverUtils;
 
 public class PageInitializer extends WebDriverUtils {
@@ -21,6 +24,9 @@ public class PageInitializer extends WebDriverUtils {
     public static CTSMSNavigationModulesPage cTSMSNavigationModulesPage;
     public static CTSMSStudentAdmissionPage cTSMSStudentAdmissionPage;
     public static RealEstateDashboardPage realEstateDashboardPage;
+    public static HomeworkModulePage homeworkModulePage;
+    public static StudentInformationPage studentInformationPage;
+    public static FeesCollectionModulePage feesCollectionModulePage;
 
     public void initializeAllPages() {
 
@@ -32,5 +38,8 @@ public class PageInitializer extends WebDriverUtils {
         cTSMSNavigationModulesPage = new CTSMSNavigationModulesPage();
         cTSMSStudentAdmissionPage = new CTSMSStudentAdmissionPage();
         realEstateDashboardPage = new RealEstateDashboardPage();
+        homeworkModulePage = new HomeworkModulePage();
+        studentInformationPage = new StudentInformationPage();
+        feesCollectionModulePage = new FeesCollectionModulePage();
     }
 }
