@@ -1,4 +1,5 @@
 package com.chroma.pages;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -92,7 +93,6 @@ public class AcademyDashBoardPage {
     /*Sections Sub Module */
     @FindBy(xpath = "//a[normalize-space()='Sections']")
     public WebElement sectionsSubModule;
-
 
     public AcademyDashBoardPage(){
         PageFactory.initElements(WebDriverUtils.driver, this);
