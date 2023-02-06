@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.chroma.web.WebDriverUtils;
 
 public class RealEstateProjectsPage {
+    
     /* Add New Project  */
     @FindBy(xpath = "//a[@class='btn btn-primary btn-lg sidebar-cta']")
     public WebElement addNewProjectModule;

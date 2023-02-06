@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.chroma.web.WebDriverUtils;
 
 public class RealEstateAgentsPage {
+    
     /* Members List Module*/
     @FindBy(xpath = "//button[@class='sidebar-item']")
     public WebElement membersListModule;
