@@ -1,6 +1,6 @@
 Feature: Add And Delete Classes test Scenario
 
-@CTSMSProgression @Umesha @DG2-18
+@CTSMSRegression @Umesha @DG2-18
 Scenario: As a Chroma Tech Academy faculty member, I want to be able to add and delete classes
     Given Chroma Tech Academy teacher/admin is on a login page "https://chroma.mexil.it/site/login"
     When Chroma Tech Academy teacher/admin logs in with valid credentials username "general@teacher.com" and password "123456"

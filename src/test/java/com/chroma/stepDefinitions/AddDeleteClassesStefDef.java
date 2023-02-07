@@ -15,14 +15,12 @@ public class AddDeleteClassesStefDef {
     LoginPage loginPage = new LoginPage();
     IncomeModulePage incomeModulePage = new IncomeModulePage();
     CommonUtils commonUtils = new CommonUtils();
-
     /*
      * ACADAMIC MODULE
      */
     @Then("Acadamic Module displayed")
     public void acadamic_Module_displayed() {
-    ctsmsNavigationModulesPage.academicsModule.click();
-        
+    ctsmsNavigationModulesPage.academicsModule.click();   
     }
     /*
      * CLASS SUB MODULE

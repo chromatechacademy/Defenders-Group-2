@@ -1,6 +1,6 @@
 Feature: Income Module Test Scenario
 
-@CTSMSProgression @Umesha @DG2-6
+@CTSMSRegression @Umesha @DG2-6
 Scenario: Income Module 
 Given Chroma Tech Academy teacher/admin is on a login page "https://chroma.mexil.it/site/login"
 When Chroma Tech Academy teacher/admin logs in with valid credentials username "general@teacher.com" and password "123456"

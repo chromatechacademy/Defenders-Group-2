@@ -69,7 +69,6 @@ public class PageInitializer extends WebDriverUtils {
         addDeleteStudentCategoriesPage = new AddDeleteStudentCategoriesPage();
         realEstateAgentPage = new RealEstateAgentPage();
         addDeleteClassesPage = new AddDeleteClassesPage();
-
         sectionsPage = new SectionsPage();
         sectionsAndClassesPage = new SectionsAndClassesPage();
         studentDetailsPage = new StudentDetailsPage();

@@ -18,6 +18,7 @@ public class DashboardPage {
     /* INCOME MODULE */
     @FindBy(xpath = "//span[normalize-space()='Income']")
     public WebElement IncomeModule; 
+    
     /* CLASS SUBMODULE */
     @FindBy(xpath = "//a[normalize-space()='Class']")
     public WebElement classSubModule;
