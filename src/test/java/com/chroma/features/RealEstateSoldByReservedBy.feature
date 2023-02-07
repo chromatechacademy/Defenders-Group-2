@@ -1,6 +1,6 @@
 Feature: Real Estate - Validate Sold By and Reserved By Modules
 
-    @RealEstateProgression @Natalya @DG2-51
+    @RealEstateRegression @Natalya @DG2-51
     Scenario: Validate Sold By and Reserved By Modules
         Given admin is on the agent login page "https://chroma-tech-academy.mexil.it/chroma_real_estate/project_files/login.php"
         When admin logs in with valid credentials email "natalya@kray.com" and password "123456"

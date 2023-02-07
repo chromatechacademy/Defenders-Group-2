@@ -26,7 +26,6 @@ public class SectionsPage {
         return WebDriverUtils.driver
                 .findElement(
                         By.xpath("//*[contains(text(),'" + sectionName + "')]//parent::tr/td[2]/a[2]"));
-
     }
 
     /* FIND SECTION NAME LOCATOR */

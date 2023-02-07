@@ -7,7 +7,6 @@ import org.openqa.selenium.support.PageFactory;
 import com.chroma.web.CommonUtils;
 import com.chroma.web.WebDriverUtils;
 
-
 public class AddDeleteStudentCategoriesPage {
 
     /* Student Category Text */

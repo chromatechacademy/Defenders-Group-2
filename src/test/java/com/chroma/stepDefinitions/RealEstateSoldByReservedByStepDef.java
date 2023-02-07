@@ -1,6 +1,7 @@
 package com.chroma.stepDefinitions;
 
 import com.chroma.appsCommon.PageInitializer;
+import com.chroma.utils.CucumberLogUtils;
 import com.chroma.web.CommonUtils;
 import com.chroma.web.JavascriptUtils;
 import cucumber.api.java.en.Then;
@@ -8,12 +9,10 @@ import cucumber.api.java.en.Then;
 public class RealEstateSoldByReservedByStepDef extends PageInitializer {
 
     @Then("agent scroll down to {string} and clicks on it")
-    public void agent_scroll_down_to_and_clicks_on_it(String soldByMeButton) throws InterruptedException {
-
+    public void agent_scroll_down_to_and_clicks_on_it(String soldByMeButton) {
         JavascriptUtils.scrollIntoView(realEstateSoldByReservedByPage.soldByMeButton);
         realEstateSoldByReservedByPage.soldByMeButton.click();
         CommonUtils.sleep(2000);
-
     }
 
     @Then("a pop-up displays with the text: {string}, {string}, {string}, {string}, {string}, {string}, {string}, {string}, {string}, {string}, {string}, {string}, {string}")
@@ -46,6 +45,8 @@ public class RealEstateSoldByReservedByStepDef extends PageInitializer {
         CommonUtils.assertEquals(Status, actualStatusText);
         String actualSoldByText = realEstateSoldByReservedByPage.soldByText.getText();
         CommonUtils.assertEquals(SoldBy, actualSoldByText);
+        CucumberLogUtils.logScreenShot();
+        CucumberLogUtils.logExtentScreenshot();
     }
 
     @Then("agent clicks on close button on a pop-up display")
@@ -90,6 +91,8 @@ public class RealEstateSoldByReservedByStepDef extends PageInitializer {
         CommonUtils.assertEquals(Status, actualStatusText2);
         String actualReservedBy = realEstateSoldByReservedByPage.reservedBy.getText();
         CommonUtils.assertEquals(ReservedBy, actualReservedBy);
+        CucumberLogUtils.logScreenShot();
+        CucumberLogUtils.logExtentScreenshot();
     }
 
     @Then("agent clicks on close button on pop-up display")

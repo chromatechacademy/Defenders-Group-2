@@ -14,6 +14,7 @@ public class HumanResourceModuleStepDef extends PageInitializer {
         loginPage.userNameTextBox.sendKeys(username);
         loginPage.passwordTextBox.sendKeys(password);
         loginPage.signButton.click();
+        CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
     }
 
@@ -45,6 +46,7 @@ public class HumanResourceModuleStepDef extends PageInitializer {
         CommonUtils.assertEquals(department, departmentSubModule);
         String designationSubModule = academyDashBoardPage.designationSubModule.getText();
         CommonUtils.assertEquals(designation, designationSubModule);
+        CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
     }
 }
