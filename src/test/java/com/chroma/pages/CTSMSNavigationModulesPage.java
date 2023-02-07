@@ -8,27 +8,34 @@ import com.chroma.web.WebDriverUtils;
 
 public class CTSMSNavigationModulesPage {
 
+    /* Student Info Module */
     @FindBy(xpath = "//span[contains(text(),'Student Information')]")
     public WebElement studentInformationModule;
 
+    /* Fees Collection Module */
     @FindBy(xpath = "//span[contains(text(),'Fees Collection')]")
     public WebElement feesCollectionModule;
 
+    /* Income Module */
     @FindBy(xpath = "//span[contains(text(),'Income')]")
     public WebElement incomeModule;
 
+    /* Expenses Module */
     @FindBy(xpath = "//span[contains(text(),'Expenses')]")
     public WebElement expensesModule;
 
+    /* Academics Module */
     @FindBy(xpath = "//span[contains(text(),'Academics')]")
     public WebElement academicsModule;
 
+    /* Human Resource Module */
     @FindBy(xpath = "//span[contains(text(),'Human Resource')]")
     public WebElement humanResourceModule;
 
     @FindBy(xpath = "//span[contains(text(),'Homework')]")
     public WebElement homeworkModule;
 
+    /* Reports Module */
     @FindBy(xpath = "//span[contains(text(),'Reports')]")
     public WebElement reportsModule;
 

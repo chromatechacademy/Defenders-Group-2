@@ -13,6 +13,7 @@ import com.chroma.pages.RealEstateDashboardPage;
 import com.chroma.pages.RealEstateInactiveAgentsPage;
 import com.chroma.pages.RealEstateLoginPage;
 import com.chroma.pages.RealEstateNewAgentWindowPage;
+import com.chroma.pages.RealEstateSoldByReservedByPage;
 import com.chroma.pages.SamplePage;
 import com.chroma.pages.SectionsAndClassesPage;
 import com.chroma.pages.SectionsPage;
@@ -39,6 +40,8 @@ public class PageInitializer extends WebDriverUtils {
     public static SectionsPage sectionsPage;
     public static SectionsAndClassesPage sectionsAndClassesPage;
     public static StudentDetailsPage studentDetailsPage;
+    public static RealEstateSoldByReservedByPage realEstateSoldByReservedByPage;
+
 
     public void initializeAllPages() {
 
@@ -60,5 +63,6 @@ public class PageInitializer extends WebDriverUtils {
         sectionsPage = new SectionsPage();
         sectionsAndClassesPage = new SectionsAndClassesPage();
         studentDetailsPage = new StudentDetailsPage();
+        realEstateSoldByReservedByPage = new RealEstateSoldByReservedByPage();
     }
 }
