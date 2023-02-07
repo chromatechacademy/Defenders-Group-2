@@ -3,7 +3,6 @@ package com.chroma.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.chroma.web.WebDriverUtils;
 
 public class IncomeModulePage {
@@ -19,7 +18,7 @@ public class IncomeModulePage {
     /*SEARCH INCOME MODULE */
     @FindBy(xpath = "//a[normalize-space()='Search Income']")
     public WebElement SearchIncomeModule;
-    
+
     /* INCOME HEAD MODULE */
     @FindBy(xpath = "//a[normalize-space()='Income Head']")
     public WebElement IncomeHeadModule;

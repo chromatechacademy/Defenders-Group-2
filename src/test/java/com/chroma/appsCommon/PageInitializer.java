@@ -30,7 +30,6 @@ public class PageInitializer extends WebDriverUtils {
     public static DashboardPage dashboardPage;
     public static LoginPage loginPage;
     public static RealEstateLoginPage realEstateLoginPage;
-    public static RealEstateDashboardPage realEstateDashboardPage;
     public static RealEstateAgentsPage realEstateAgentsPage;
     public static RealEstateNewAgentWindowPage realEstateNewAgentWindowPage;
     public static RealEstateActiveAgentsPage realEstateActiveAgentsPage;
@@ -39,8 +38,6 @@ public class PageInitializer extends WebDriverUtils {
     public static CTSMSStudentAdmissionPage cTSMSStudentAdmissionPage;
     public static RealEstateDashboardPage realEstateDashboardPage;
     public static IncomeModulePage incomeModulePage;
-    public static AddDeleteStudentCategoriesPage addDeleteStudentCategoriesPage;
-    public static RealEstateAgentPage realEstateAgentPage;
     public static AddDeleteClassesPage addDeleteClassesPage;
     public static AddDeleteStudentCategoriesPage addDeleteStudentCategoriesPage;
     public static RealEstateAgentPage realEstateAgentPage;
@@ -48,7 +45,6 @@ public class PageInitializer extends WebDriverUtils {
     public static SectionsAndClassesPage sectionsAndClassesPage;
     public static StudentDetailsPage studentDetailsPage;
     public static RealEstateSoldByReservedByPage realEstateSoldByReservedByPage;
-
 
     public void initializeAllPages() {
 

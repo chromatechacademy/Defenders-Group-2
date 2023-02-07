@@ -31,7 +31,7 @@ public class AddDeleteClassesPage {
     // SEARCH CLASS//
     @FindBy(xpath = "//input[@placeholder='Search...']")
     public WebElement SearchClass;
-    
+
     // DELETE CLASS//
     @FindBy(xpath = "//tbody//a[2]")
     public WebElement deleteClassButton;
@@ -39,5 +39,4 @@ public class AddDeleteClassesPage {
     public AddDeleteClassesPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
     }
-
 }

@@ -1,24 +1,13 @@
 package com.chroma.stepDefinitions;
 
-import java.util.concurrent.TimeUnit;
-
-import com.chroma.pages.CTSMSNavigationModulesPage;
-import com.chroma.pages.DashboardPage;
-import com.chroma.pages.IncomeModulePage;
-import com.chroma.pages.LoginPage;
+import com.chroma.appsCommon.PageInitializer;
 import com.chroma.utils.CucumberLogUtils;
 import com.chroma.web.CommonUtils;
-import com.chroma.web.WebDriverUtils;
-import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class IncomeModuleStepDefinition {
-    DashboardPage dashboardPage = new DashboardPage();
-    LoginPage loginPage = new LoginPage();
-    CommonUtils commonUtils = new CommonUtils();
-    CTSMSNavigationModulesPage cTSMSNavigationModulesPage = new CTSMSNavigationModulesPage();
-    IncomeModulePage incomeModulePage = new IncomeModulePage();
+public class IncomeModuleStepDefinition extends PageInitializer{
+    
     /*
      * INCOME MODULE
      */
@@ -41,7 +30,5 @@ public class IncomeModuleStepDefinition {
         CommonUtils.assertEquals(actuaIncomeHeadModuelText, IncomeHead);
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
-
     }
-
 }
