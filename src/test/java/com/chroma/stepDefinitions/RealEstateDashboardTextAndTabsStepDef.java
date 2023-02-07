@@ -1,4 +1,5 @@
 package com.chroma.stepDefinitions;
+
 import com.chroma.appsCommon.PageInitializer;
 import com.chroma.utils.CucumberLogUtils;
 import com.chroma.web.CommonUtils;
@@ -15,7 +16,7 @@ public class RealEstateDashboardTextAndTabsStepDef extends PageInitializer {
     }
 
     @Given("admin logs in with valid credentials email {string} and password {string}")
-    public void admin_logs_in_with_valid_credentials_email_and_password(String email, String password){
+    public void admin_logs_in_with_valid_credentials_email_and_password(String email, String password) {
         JavascriptUtils.scrollIntoView(realEstateLoginPage.forgotPasswordButton);
         CommonUtils.sleep(3000);
         realEstateLoginPage.emailUserTextBox.sendKeys(email);
@@ -26,7 +27,8 @@ public class RealEstateDashboardTextAndTabsStepDef extends PageInitializer {
 
     @Then("the admin sholud see the following elements {string}, {string}, {string}, {string}, {string}, {string} and following tabs {string}, {string}, {string}")
     public void the_admin_sholud_see_the_following_elements_and_following_tabs(String dashboard, String helloAdmin,
-            String overview, String agentsGraph, String propertiesOverview, String properties, String agentsTab, String dashboardTab,
+            String overview, String agentsGraph, String propertiesOverview, String properties, String agentsTab,
+            String dashboardTab,
             String projectsTab) {
         String actualDashboardElementText = realEstateDashboardPage.dashboardElementText.getText();
         CommonUtils.assertEquals(dashboard, actualDashboardElementText);
@@ -47,5 +49,5 @@ public class RealEstateDashboardTextAndTabsStepDef extends PageInitializer {
         String actualProjectsTabText = realEstateDashboardPage.projectsTab.getText();
         CommonUtils.assertEquals(projectsTab, actualProjectsTabText);
         CucumberLogUtils.logExtentScreenshot();
-     }
+    }
 }

@@ -1,7 +1,5 @@
 package com.chroma.runners;
-
 import org.junit.runner.RunWith;
-
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
@@ -17,6 +15,5 @@ import cucumber.api.junit.Cucumber;
 		strict = true
 ) 
 
-public class RealEstateProgressionRunners {
-    
+public class RealEstateProgressionRunners {    
 }

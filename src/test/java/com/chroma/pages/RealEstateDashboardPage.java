@@ -1,11 +1,12 @@
 package com.chroma.pages;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.chroma.web.WebDriverUtils;
 
 public class RealEstateDashboardPage {
-    
+
     /* Dashboard Element Text */
     @FindBy(xpath = "//a[@type='button']")
     public WebElement dashboardElementText;
@@ -18,13 +19,13 @@ public class RealEstateDashboardPage {
     /* Agents Graph Element Text */
     @FindBy(xpath = "//a[normalize-space()='Agents Graph']")
     public WebElement agentsGraphText;
-    /* Properties Overview Text*/
+    /* Properties Overview Text */
     @FindBy(xpath = "//h5[@class='fs-28 my-4']")
     public WebElement propertiesOverviewText;
-    /* Properties Text*/
+    /* Properties Text */
     @FindBy(xpath = "//h6[@class='fs-18 fw-semibold']")
     public WebElement propertiesText;
-    /* Agents Tab*/
+    /* Agents Tab */
     @FindBy(xpath = "//span[normalize-space()='Agents']")
     public WebElement agentsTab;
     /* Dashboard Tab */

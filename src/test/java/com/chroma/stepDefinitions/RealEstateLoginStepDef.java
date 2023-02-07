@@ -21,7 +21,7 @@ public class RealEstateLoginStepDef extends PageInitializer {
     public void admin_logs_out_the_admin_site() {
         realEstateAgentPage.adminLogOutBox.click();
         CommonUtils.waitForVisibility(realEstateAgentPage.adminLogOutButton);
-        realEstateAgentPage.adminLogOutButton.click();    
+        realEstateAgentPage.adminLogOutButton.click();
     }
 
     @Given("admin is on the agent login page {string}")
