@@ -18,6 +18,7 @@ public class CTSMSStudentAdmissionPage {
 
     @FindBy(xpath = "//select[@id='class_id']")
     public WebElement classDropDown;
+
     @FindBy(xpath = "//select[@id='section_id']")
     public WebElement sectionDropDown;
 
