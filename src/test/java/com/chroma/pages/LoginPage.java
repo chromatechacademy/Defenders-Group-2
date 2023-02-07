@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.chroma.web.WebDriverUtils;
 
 public class LoginPage {
+    
     /* USERNAME TEXTBOX */
     @FindBy(xpath = "//input[@id='form-username']")
     public WebElement userNameTextBox;

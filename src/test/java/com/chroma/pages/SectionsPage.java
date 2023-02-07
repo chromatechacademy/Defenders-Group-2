@@ -8,12 +8,16 @@ import org.openqa.selenium.support.PageFactory;
 import com.chroma.web.WebDriverUtils;
 
 public class SectionsPage {
+
     /* SECTION NAME TEXT BOX */
     @FindBy(xpath = "//input[@id='section']")
     public WebElement sectionNameTextBox;
+
     /* SAVE BUTTON */
     @FindBy(xpath = "//button[@type='submit'][normalize-space()='Save']")
     public WebElement saveButton;
+
+    /* SAVE MESSAGE */
     @FindBy(xpath = "//div[@class='alert alert-success text-left']")
     public WebElement successfullySavedMessage;
 

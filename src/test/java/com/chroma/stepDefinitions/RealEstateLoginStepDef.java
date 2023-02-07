@@ -31,9 +31,11 @@ public class RealEstateLoginStepDef extends PageInitializer {
 
     @Then("admin is seccesfully loged in on Agent Real Estate web page {string}")
     public void admin_is_seccesfully_loged_in_on_Agent_Real_Estate_web_page(String url) {
+        
     }
 
     @Then("admin logs out the Agent site")
     public void admin_logs_out_the_Agent_site() {
+        realEstateAgentPage.adminLogOutButton.click();
     }
 }

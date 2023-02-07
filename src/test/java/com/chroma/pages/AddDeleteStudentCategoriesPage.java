@@ -9,21 +9,27 @@ import com.chroma.web.WebDriverUtils;
 
 
 public class AddDeleteStudentCategoriesPage {
+
     /* Student Category Text */
     @FindBy(xpath = "//*[contains(text(),'Categories')]") 
     public WebElement studentCategories;
+
     /* Create Category Text */
     @FindBy(xpath = "//h3[@class='box-title']")
     public WebElement createCategoryText;
+
     /* Category Text */
     @FindBy(xpath = "//input[@id='category']") 
     public WebElement categoryText;
+
     /* Category Save Button */
     @FindBy(xpath = "//button[@type='submit'][normalize-space()='Save']") 
     public WebElement categorySaveButton;
+
     /* Saved Succesfully Text */
     @FindBy(xpath = "//div[@class='alert alert-success text-left']") 
     public WebElement categorySavedSuccesfullyText;
+    
     /* Delete Locator */
     public static WebElement categoryDeleteLocator(String categoryNameText) { 
         return WebDriverUtils.driver.findElement(By.xpath("//td[normalize-space()='" + categoryNameText 
