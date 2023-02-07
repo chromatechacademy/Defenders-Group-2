@@ -24,7 +24,6 @@ public class AddDeleteClassesStefDef {
     ctsmsNavigationModulesPage.academicsModule.click();
         
     }
-
     /*
      * CLASS SUB MODULE
      */
@@ -32,7 +31,6 @@ public class AddDeleteClassesStefDef {
     public void i_should_able_to_click_Class_sub_module() {
         addDeleteClassesPage.ClassSubModuleLink.click();
     }
-
     /*
      * ADD CLASS
      */
@@ -41,7 +39,6 @@ public class AddDeleteClassesStefDef {
         addDeleteClassesPage.ClassTextBox.sendKeys(newClassName);
         CommonUtils.sleep(500);
     }
-
     /*
      * SELECT SECTIONS
      */
@@ -53,7 +50,6 @@ public class AddDeleteClassesStefDef {
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
     }
-
     /*
      * SAVE CLASS
      */
@@ -61,7 +57,6 @@ public class AddDeleteClassesStefDef {
     public void i_should_able_to_save() {
         addDeleteClassesPage.SaveButton.click();
     }
-
     /*
      * SEARCH CLASS ALREADY SAVED
      */
@@ -70,7 +65,6 @@ public class AddDeleteClassesStefDef {
         addDeleteClassesPage.SearchClass.sendKeys(searchNewClass);
         CommonUtils.sleep(500);
     }
-
     /*
      * DELETE CLASS
      */
