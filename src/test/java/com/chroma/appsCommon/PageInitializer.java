@@ -3,6 +3,7 @@ package com.chroma.appsCommon;
 import com.chroma.pages.CTSMSNavigationModulesPage;
 import com.chroma.pages.CTSMSStudentAdmissionPage;
 import com.chroma.pages.AcademyDashBoardPage;
+import com.chroma.pages.AddDeleteClassesPage;
 import com.chroma.pages.AddDeleteStudentCategoriesPage;
 import com.chroma.pages.DashboardPage;
 import com.chroma.pages.IncomeModulePage;
@@ -27,6 +28,7 @@ public class PageInitializer extends WebDriverUtils {
     public static IncomeModulePage incomeModulePage;
     public static AddDeleteStudentCategoriesPage addDeleteStudentCategoriesPage;
     public static RealEstateAgentPage realEstateAgentPage;
+    public static AddDeleteClassesPage addDeleteClassesPage;
 
     public void initializeAllPages() {
 
@@ -41,5 +43,7 @@ public class PageInitializer extends WebDriverUtils {
         incomeModulePage = new IncomeModulePage();
         addDeleteStudentCategoriesPage = new AddDeleteStudentCategoriesPage();
         realEstateAgentPage = new RealEstateAgentPage();
+        addDeleteClassesPage = new AddDeleteClassesPage();
+
     }
 }
