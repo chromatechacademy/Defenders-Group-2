@@ -1,4 +1,5 @@
 package com.chroma.stepDefinitions;
+
 import com.chroma.appsCommon.PageInitializer;
 import com.chroma.utils.CucumberLogUtils;
 import com.chroma.web.CommonUtils;
@@ -19,6 +20,7 @@ public class InvaildLoginStepDef extends PageInitializer {
         loginPage.userNameTextBox.sendKeys(userName);
         loginPage.passwordTextBox.sendKeys(password);
         loginPage.signButton.click();
+        CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
     }
 
@@ -26,6 +28,7 @@ public class InvaildLoginStepDef extends PageInitializer {
     public void user_sees_invalid_message(String invalidUsernameOrPassword) {
         String actualInvalidMessage = loginPage.invaildLoginMessage.getText();
         CommonUtils.assertEquals(invalidUsernameOrPassword, actualInvalidMessage);
+        CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
     }
 

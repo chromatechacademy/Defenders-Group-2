@@ -17,6 +17,7 @@ public class SectionsPage {
     @FindBy(xpath = "//button[@type='submit'][normalize-space()='Save']")
     public WebElement saveButton;
 
+    /* SAVE MESSAGE */
     @FindBy(xpath = "//div[@class='alert alert-success text-left']")
     public WebElement successfullySavedMessage;
 
@@ -25,14 +26,12 @@ public class SectionsPage {
         return WebDriverUtils.driver
                 .findElement(
                         By.xpath("//*[contains(text(),'" + sectionName + "')]//parent::tr/td[2]/a[2]"));
-
     }
 
     /* FIND SECTION NAME LOCATOR */
     public static List<WebElement> sectionNameLocator(String sectionName) {
         return WebDriverUtils.driver.findElements(By
                 .xpath("//*[contains(text(),'" + sectionName + "')]"));
-
     }
 
     public SectionsPage() {
