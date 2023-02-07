@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.chroma.web.WebDriverUtils;
 
 public class DashboardPage {
+    
     /* ACADEMICS MODULE */
     @FindBy(xpath = "//span[contains(text(),'Academics')]")
     public WebElement academicsModule;
@@ -17,6 +18,10 @@ public class DashboardPage {
     /* CLASS SUBMODULE */
     @FindBy(xpath = "//a[normalize-space()='Class']")
     public WebElement classSubModule;
+
+    /* STUDENT DETAILS SUBMODULE */
+    @FindBy(xpath = "//ul[@class='treeview-menu']//a[normalize-space()='Student Details']")
+    public WebElement studentDetailsSubModule;
 
     public DashboardPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);

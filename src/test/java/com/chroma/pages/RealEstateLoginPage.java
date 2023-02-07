@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.chroma.web.WebDriverUtils;
 
 public class RealEstateLoginPage {
+
     /* Email User Text Box */
     @FindBy(xpath = "//input[@placeholder='Email']")
     public WebElement emailUserTextBox;
@@ -15,8 +16,12 @@ public class RealEstateLoginPage {
     public WebElement passwordUserTextBox;
 
     /* Login Button */
-    @FindBy(xpath = "//button[contains(text(),'Login')]")
+    @FindBy(xpath = "//button[contains(text(),'Login')]") 
     public WebElement loginButton;
+    
+    /*Agent login Button */
+    @FindBy(xpath = "//button[normalize-space()='Login']")
+    public WebElement agentLoginButton;
 
     public RealEstateLoginPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
