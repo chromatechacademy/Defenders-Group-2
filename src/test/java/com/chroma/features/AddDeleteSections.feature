@@ -1,6 +1,6 @@
 Feature: Add and delete sections via the Academics module
 
-  @Smoke
+  @CTSMSRegression @IToropov @DG2-17
   Scenario Outline: As a Chroma Tech faculty member, I want to be able to add and delete sections via the Academics module.
     Given Chroma Tech faculty member is on a login page "https://chroma.mexil.it/site/login"
     When Chroma Tech faculty member logs in with valid credentials username "general@teacher.com" and password "123456"

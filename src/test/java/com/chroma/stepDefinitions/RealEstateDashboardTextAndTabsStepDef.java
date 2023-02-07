@@ -1,12 +1,8 @@
 package com.chroma.stepDefinitions;
 
 import com.chroma.appsCommon.PageInitializer;
-import com.chroma.utils.CucumberLogUtils;
-import com.chroma.web.CommonUtils;
-import com.chroma.web.JavascriptUtils;
 import com.chroma.web.WebDriverUtils;
 import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
 
 public class RealEstateDashboardTextAndTabsStepDef extends PageInitializer {
 
@@ -16,14 +12,19 @@ public class RealEstateDashboardTextAndTabsStepDef extends PageInitializer {
     }
 
     @Given("admin logs in with valid credentials email {string} and password {string}")
+<<<<<<< HEAD
     public void admin_logs_in_with_valid_credentials_email_and_password(String email, String password) {
         JavascriptUtils.scrollIntoView(realEstateLoginPage.forgotPasswordButton);
         CommonUtils.sleep(3000);
+=======
+    public void admin_logs_in_with_valid_credentials_email_and_password(String email, String password) throws InterruptedException {
+>>>>>>> d761ebfe37fdc65ef6cc17c39b2c5fa79e4361d1
         realEstateLoginPage.emailUserTextBox.sendKeys(email);
         realEstateLoginPage.passwordUserTextBox.sendKeys(password);
         realEstateLoginPage.loginButton.click();
-        CucumberLogUtils.logExtentScreenshot();
+        Thread.sleep(2000);
     }
+<<<<<<< HEAD
 
     @Then("the admin sholud see the following elements {string}, {string}, {string}, {string}, {string}, {string} and following tabs {string}, {string}, {string}")
     public void the_admin_sholud_see_the_following_elements_and_following_tabs(String dashboard, String helloAdmin,
@@ -50,4 +51,6 @@ public class RealEstateDashboardTextAndTabsStepDef extends PageInitializer {
         CommonUtils.assertEquals(projectsTab, actualProjectsTabText);
         CucumberLogUtils.logExtentScreenshot();
     }
+=======
+>>>>>>> d761ebfe37fdc65ef6cc17c39b2c5fa79e4361d1
 }

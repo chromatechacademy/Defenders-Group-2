@@ -15,9 +15,12 @@ public class RealEstateLoginPage {
     /* Login Button */
     @FindBy(xpath = "//button[contains(text(),'Login')]")
     public WebElement loginButton;
+<<<<<<< HEAD
     /* Forgot Password Button */
     @FindBy(xpath = "//a[normalize-space()='Forget Password?']")
     public WebElement forgotPasswordButton;
+=======
+>>>>>>> d761ebfe37fdc65ef6cc17c39b2c5fa79e4361d1
 
     public RealEstateLoginPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
