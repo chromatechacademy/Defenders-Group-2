@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.chroma.web.WebDriverUtils;
 
 public class AcademyDashBoardPage {
+    
     /* Human Resource Module */
     @FindBy(xpath = "//span[normalize-space()='Human Resource']")
     public WebElement humanResourceModule;

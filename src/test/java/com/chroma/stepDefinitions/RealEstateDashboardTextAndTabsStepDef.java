@@ -23,6 +23,7 @@ public class RealEstateDashboardTextAndTabsStepDef extends PageInitializer {
         realEstateLoginPage.passwordUserTextBox.sendKeys(password);
         realEstateLoginPage.loginButton.click();
         CucumberLogUtils.logExtentScreenshot();
+        CucumberLogUtils.logScreenShot();
     }
 
     @Then("the admin sholud see the following elements {string}, {string}, {string}, {string}, {string}, {string} and following tabs {string}, {string}, {string}")
@@ -48,5 +49,6 @@ public class RealEstateDashboardTextAndTabsStepDef extends PageInitializer {
         String actualProjectsTabText = realEstateDashboardPage.projectsTab.getText();
         CommonUtils.assertEquals(projectsTab, actualProjectsTabText);
         CucumberLogUtils.logExtentScreenshot();
+        CucumberLogUtils.logScreenShot();
      }
 }
