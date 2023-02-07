@@ -1,10 +1,12 @@
 package com.chroma.appsCommon;
 
 import com.chroma.pages.AcademyDashBoardPage;
+import com.chroma.pages.AddDeleteClassesPage;
 import com.chroma.pages.AddDeleteStudentCategoriesPage;
 import com.chroma.pages.CTSMSNavigationModulesPage;
 import com.chroma.pages.CTSMSStudentAdmissionPage;
 import com.chroma.pages.DashboardPage;
+import com.chroma.pages.IncomeModulePage;
 import com.chroma.pages.LoginPage;
 import com.chroma.pages.RealEstateAgentsPage;
 import com.chroma.pages.RealEstateActiveAgentsPage;
@@ -29,7 +31,6 @@ public class PageInitializer extends WebDriverUtils {
     public static DashboardPage dashboardPage;
     public static LoginPage loginPage;
     public static RealEstateLoginPage realEstateLoginPage;
-    public static RealEstateDashboardPage realEstateDashboardPage;
     public static RealEstateAgentsPage realEstateAgentsPage;
     public static RealEstateNewAgentWindowPage realEstateNewAgentWindowPage;
     public static RealEstateActiveAgentsPage realEstateActiveAgentsPage;
@@ -37,13 +38,15 @@ public class PageInitializer extends WebDriverUtils {
     public static CTSMSNavigationModulesPage cTSMSNavigationModulesPage;
     public static CTSMSStudentAdmissionPage cTSMSStudentAdmissionPage;
     public static RealEstateProjectsPage realEstateProjectsPage;
+    public static RealEstateDashboardPage realEstateDashboardPage;
+    public static IncomeModulePage incomeModulePage;
+    public static AddDeleteClassesPage addDeleteClassesPage;
     public static AddDeleteStudentCategoriesPage addDeleteStudentCategoriesPage;
     public static RealEstateAgentPage realEstateAgentPage;
     public static SectionsPage sectionsPage;
     public static SectionsAndClassesPage sectionsAndClassesPage;
     public static StudentDetailsPage studentDetailsPage;
     public static RealEstateSoldByReservedByPage realEstateSoldByReservedByPage;
-
 
     public void initializeAllPages() {
 
@@ -62,8 +65,10 @@ public class PageInitializer extends WebDriverUtils {
         realEstateDashboardPage = new RealEstateDashboardPage();
         realEstateProjectsPage = new RealEstateProjectsPage();
         realEstateAgentsPage = new RealEstateAgentsPage();
+        incomeModulePage = new IncomeModulePage();
         addDeleteStudentCategoriesPage = new AddDeleteStudentCategoriesPage();
         realEstateAgentPage = new RealEstateAgentPage();
+        addDeleteClassesPage = new AddDeleteClassesPage();
         sectionsPage = new SectionsPage();
         sectionsAndClassesPage = new SectionsAndClassesPage();
         studentDetailsPage = new StudentDetailsPage();
