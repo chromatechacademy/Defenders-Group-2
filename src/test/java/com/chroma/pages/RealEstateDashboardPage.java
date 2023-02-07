@@ -51,6 +51,18 @@ public class RealEstateDashboardPage {
     @FindBy(xpath = "//body//main")
     public WebElement mainFrame;
 
+    /* AGENTS CLASS LOCATOR */
+    @FindBy(xpath = "//span[normalize-space()='Agents']")
+    public WebElement agentsClass;
+
+    /* ACTIVE AGENT LIST LOCATOR */
+    @FindBy(xpath = "//a[normalize-space()='Active']")
+    public WebElement activeList;
+
+    /* INACTIVE AGENT LIST LOCATOR */
+    @FindBy(xpath = "//a[normalize-space()='Inactive']")
+    public WebElement inactiveList;
+
     public RealEstateDashboardPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
     }

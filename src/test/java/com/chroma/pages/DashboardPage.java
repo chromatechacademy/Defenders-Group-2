@@ -1,4 +1,5 @@
 package com.chroma.pages;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -12,6 +13,10 @@ public class DashboardPage {
     /* SECTIONS SUBMODULE */
     @FindBy(xpath = "//a[normalize-space()='Sections']")
     public WebElement sectionsSubModule;
+
+    /* CLASS SUBMODULE */
+    @FindBy(xpath = "//a[normalize-space()='Class']")
+    public WebElement classSubModule;
 
     public DashboardPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);

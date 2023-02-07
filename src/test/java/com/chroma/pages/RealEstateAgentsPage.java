@@ -43,6 +43,10 @@ public class RealEstateAgentsPage {
     @FindBy(xpath = "//th[@class='text-end']")
     public WebElement actionsText;
 
+     /* ADD NOW LOCATOR */
+     @FindBy(xpath = "//button[normalize-space()='Add Now']")
+     public WebElement addNowButton;
+
     public RealEstateAgentsPage(){
         PageFactory.initElements(WebDriverUtils.driver, this);
     }
