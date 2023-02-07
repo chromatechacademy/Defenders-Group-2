@@ -36,7 +36,7 @@
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
-			<version>5.2.0</version>
+			<version>5.3.2</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
@@ -115,7 +115,7 @@
 				<configuration>
 					<includes>
 						<include>
-							CTSMSProgressionRunners.java
+							RealEstateProgressionRunners.java
 						</include>
 					</includes>
 					<testFailureIgnore>true</testFailureIgnore> <!-- to get report even when fails -->

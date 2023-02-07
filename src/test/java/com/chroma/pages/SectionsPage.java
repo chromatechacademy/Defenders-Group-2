@@ -1,12 +1,10 @@
 package com.chroma.pages;
 
 import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.chroma.web.WebDriverUtils;
 
 public class SectionsPage {
@@ -19,6 +17,7 @@ public class SectionsPage {
     @FindBy(xpath = "//button[@type='submit'][normalize-space()='Save']")
     public WebElement saveButton;
 
+    /* SAVE MESSAGE */
     @FindBy(xpath = "//div[@class='alert alert-success text-left']")
     public WebElement successfullySavedMessage;
 
@@ -27,14 +26,12 @@ public class SectionsPage {
         return WebDriverUtils.driver
                 .findElement(
                         By.xpath("//*[contains(text(),'" + sectionName + "')]//parent::tr/td[2]/a[2]"));
-
     }
 
     /* FIND SECTION NAME LOCATOR */
     public static List<WebElement> sectionNameLocator(String sectionName) {
         return WebDriverUtils.driver.findElements(By
                 .xpath("//*[contains(text(),'" + sectionName + "')]"));
-
     }
 
     public SectionsPage() {
