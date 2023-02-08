@@ -1,6 +1,6 @@
 Feature: As an admin user, I am able to add 3 agent with a unique parametrs ,verify that 3 agents and then delete them
 
-  @RealEstateProgression @IToropov @DG2-47
+  @RealEstateRegression @IToropov @DG2-47
   Scenario: Create and Delete 3 Agents
     Given a real estate admin is on the login page "https://chroma-tech-academy.mexil.it/chroma_real_estate/project_files/admin/login.php"
     And admin logs in with valid credentials email "admin@mexil.it" and password "123456"
