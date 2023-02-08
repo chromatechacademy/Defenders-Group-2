@@ -71,15 +71,12 @@ public class PageInitializer extends WebDriverUtils {
         cTSMSNavigationModulesPage = new CTSMSNavigationModulesPage();
         cTSMSStudentAdmissionPage = new CTSMSStudentAdmissionPage();
         realEstateDashboardPage = new RealEstateDashboardPage();
-<<<<<<< HEAD
         realEstateProjectsPage = new RealEstateProjectsPage();
         realEstateAgentsPage = new RealEstateAgentsPage();
-=======
         studentInformationPage = new StudentInformationPage();
         homeworkModulePage = new HomeworkModulePage();
         addDeleteStudentCategoriesPage = new AddDeleteStudentCategoriesPage();
         realEstateAgentPage = new RealEstateAgentPage();
->>>>>>> c6cebd062fe3a22441112fb876ae378518303594
         incomeModulePage = new IncomeModulePage();
         addDeleteStudentCategoriesPage = new AddDeleteStudentCategoriesPage();
         realEstateAgentPage = new RealEstateAgentPage();
