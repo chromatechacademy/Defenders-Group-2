@@ -16,9 +16,8 @@ public class FeesCollectionModuleStepDef extends PageInitializer {
     }
 
     @Given("navigates to Fees Collection Module")
-    public void navigates_to_Fees_Collection_Module() throws InterruptedException {
+    public void navigates_to_Fees_Collection_Module() {
         cTSMSNavigationModulesPage.feesCollectionModule.click();
-        Thread.sleep(3000);
         CommonUtils.waitForVisibility(feesCollectionModulePage.collectFeesSubModule);
         CommonUtils.waitForVisibility(feesCollectionModulePage.feesReminderSubModule);
         CommonUtils.waitForVisibility(feesCollectionModulePage.feesCarryForwardSubModule);
