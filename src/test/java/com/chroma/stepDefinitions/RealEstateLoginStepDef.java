@@ -21,7 +21,7 @@ public class RealEstateLoginStepDef extends PageInitializer {
     public void admin_logs_out_the_admin_site() {
         realEstateAgentPage.adminLogOutBox.click();
         CommonUtils.waitForVisibility(realEstateAgentPage.adminLogOutButton);
-        realEstateAgentPage.adminLogOutButton.click();    
+        realEstateAgentPage.adminLogOutButton.click();
     }
 
     @Given("admin is on the agent login page {string}")
@@ -31,9 +31,11 @@ public class RealEstateLoginStepDef extends PageInitializer {
 
     @Then("admin is seccesfully loged in on Agent Real Estate web page {string}")
     public void admin_is_seccesfully_loged_in_on_Agent_Real_Estate_web_page(String url) {
+        
     }
 
     @Then("admin logs out the Agent site")
     public void admin_logs_out_the_Agent_site() {
+        realEstateAgentPage.adminLogOutButton.click();
     }
 }
