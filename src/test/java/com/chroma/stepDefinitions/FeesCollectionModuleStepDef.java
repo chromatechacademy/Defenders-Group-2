@@ -30,32 +30,23 @@ public class FeesCollectionModuleStepDef extends PageInitializer {
             String feesMaster, String feesGroup, String feesType, String feesDiscount, String feesCarryForward,
             String Reminder) {
         String actualCollectFeesSubModule = feesCollectionModulePage.collectFeesSubModule.getText();
-        System.out.println(actualCollectFeesSubModule);
         CommonUtils.assertEquals(actualCollectFeesSubModule, CollectFees);
         String actualSearchFeesPaymentText = feesCollectionModulePage.searchFeesPaymentSubModule.getText();
-        System.out.println(actualSearchFeesPaymentText);
         CommonUtils.assertEquals(actualSearchFeesPaymentText, serchFeesPayment);
         String actualFeesMasterText = feesCollectionModulePage.feesMasterSubModule.getText();
-        System.out.println(actualFeesMasterText);
         CommonUtils.assertEquals(actualFeesMasterText, feesMaster);
         String actualSearchDueFeesText = feesCollectionModulePage.serachDueFeesSubModule.getText();
-        System.out.println(actualSearchDueFeesText);
         CommonUtils.assertEquals(actualSearchDueFeesText, searchDueFees);
         String actualFeesGroupText = feesCollectionModulePage.feesGroupSubModule.getText();
-        System.out.println(actualFeesGroupText);
         CommonUtils.assertEquals(actualFeesGroupText, feesGroup);
         String actualFeesTypeText = feesCollectionModulePage.feesTypeSubModule.getText();
-        System.out.println(actualFeesTypeText);
         CommonUtils.assertEquals(actualFeesTypeText, feesType);
         String actualFeesDiscountText = feesCollectionModulePage.feesDiscountSubModule.getText();
-        System.out.println(actualFeesDiscountText);
         CommonUtils.assertEquals(actualFeesDiscountText, feesDiscount);
         String actualFeesCarryForwardText = feesCollectionModulePage.feesCarryForwardSubModule.getText();
-        System.out.println(actualFeesCarryForwardText);
         CommonUtils.assertEquals(actualFeesCarryForwardText, feesCarryForward);
         String actualFeesReminderText = feesCollectionModulePage.feesReminderSubModule.getText();
         CommonUtils.assertEquals(actualFeesReminderText, Reminder);
-        System.out.println(actualFeesReminderText);
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
     }
