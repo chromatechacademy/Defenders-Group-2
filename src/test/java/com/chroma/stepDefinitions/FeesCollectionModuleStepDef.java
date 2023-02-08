@@ -22,6 +22,7 @@ public class FeesCollectionModuleStepDef extends PageInitializer {
         CommonUtils.waitForVisibility(feesCollectionModulePage.collectFeesSubModule);
         CommonUtils.waitForVisibility(feesCollectionModulePage.feesReminderSubModule);
         CommonUtils.waitForVisibility(feesCollectionModulePage.feesCarryForwardSubModule);
+        CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
     }
 
@@ -56,5 +57,7 @@ public class FeesCollectionModuleStepDef extends PageInitializer {
         String actualFeesReminderText = feesCollectionModulePage.feesReminderSubModule.getText();
         CommonUtils.assertEquals(actualFeesReminderText, Reminder);
         System.out.println(actualFeesReminderText);
+        CucumberLogUtils.logScreenShot();
+        CucumberLogUtils.logExtentScreenshot();
     }
 }

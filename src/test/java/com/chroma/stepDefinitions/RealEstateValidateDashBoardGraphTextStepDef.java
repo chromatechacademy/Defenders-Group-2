@@ -33,7 +33,6 @@ public class RealEstateValidateDashBoardGraphTextStepDef extends PageInitializer
     @Then("clicks on the text Overview")
     public void clicks_on_the_text_Overview() {
         realEstateValidateDashBoardGraphTextPage.overviewText.click();
-
     }
 
     @Then("the graph should be displayed with a header text {string}")
@@ -43,5 +42,4 @@ public class RealEstateValidateDashBoardGraphTextStepDef extends PageInitializer
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
     }
-
 }

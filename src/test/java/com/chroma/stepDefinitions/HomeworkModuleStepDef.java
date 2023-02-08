@@ -19,6 +19,7 @@ public class HomeworkModuleStepDef extends PageInitializer {
     @Given("user clicks on Homework section")
     public void user_clicks_on_Homework_section() {
         cTSMSNavigationModulesPage.homeworkModule.click();
+        CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
     }
 
@@ -27,6 +28,8 @@ public class HomeworkModuleStepDef extends PageInitializer {
         String actualAddHomeworkText = homeworkModulePage.addHomeworkSubModule.getText();
         CommonUtils.waitForVisibility(homeworkModulePage.addHomeworkSubModule);
         CommonUtils.assertEquals(actualAddHomeworkText, addHomeworkString);
-        System.out.println(actualAddHomeworkText);    
+        System.out.println(actualAddHomeworkText); 
+        CucumberLogUtils.logScreenShot();
+        CucumberLogUtils.logExtentScreenshot();   
     }
 }

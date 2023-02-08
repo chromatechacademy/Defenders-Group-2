@@ -53,8 +53,7 @@ public class PageInitializer extends WebDriverUtils {
     public static RealEstateSoldByReservedByPage realEstateSoldByReservedByPage;
     public static FeesCollectionModulePage feesCollectionModulePage;
     public static RealEstateValidateDashBoardGraphTextPage realEstateValidateDashBoardGraphTextPage;
-
-
+   
     public void initializeAllPages() {
 
         samplePage = new SamplePage();
@@ -84,5 +83,8 @@ public class PageInitializer extends WebDriverUtils {
         realEstateSoldByReservedByPage = new RealEstateSoldByReservedByPage();
         feesCollectionModulePage = new FeesCollectionModulePage();
         realEstateValidateDashBoardGraphTextPage = new RealEstateValidateDashBoardGraphTextPage();
+        homeworkModulePage = new HomeworkModulePage();
+        studentInformationPage = new StudentInformationPage();
+        feesCollectionModulePage = new FeesCollectionModulePage();
     }
 }
