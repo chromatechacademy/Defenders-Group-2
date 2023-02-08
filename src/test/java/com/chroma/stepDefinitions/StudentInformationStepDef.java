@@ -11,9 +11,9 @@ public class StudentInformationStepDef extends PageInitializer {
     @Given("a user logs in to the CTSMS website with valid credentials username{string} and password {string}")
     public void a_user_logs_in_to_the_CTSMS_website_with_valid_credentials_username_and_password(String username,
             String password) {
-        loginPage.userNameTextBox.sendKeys(username);
-        loginPage.passwordTextBox.sendKeys(password);
-        loginPage.signButton.click();
+                loginPage.userNameTextBox.sendKeys(username);
+                loginPage.passwordTextBox.sendKeys(password);
+                loginPage.signButton.click();
     }
 
     @Given("user clicks on Student Information section")
@@ -22,14 +22,12 @@ public class StudentInformationStepDef extends PageInitializer {
         CommonUtils.waitForVisibility(studentInformationPage.studentDetailsSubModule);
         CommonUtils.waitForVisibility(studentInformationPage.studentHouseSubModule);
         CommonUtils.waitForVisibility(studentInformationPage.disabledStudentsSubModule);
-        CucumberLogUtils.logScreenShot();
-        CucumberLogUtils.logExtentScreenshot();
+        CucumberLogUtils.logExtentScreenshot();    
     }
 
     @Then("following submodule displayed {string}, {string} ,{string} ,{string},{string}, {string} ,{string}")
     public void following_submodule_displayed(String studentDetails, String studentAdmission, String disabledStudents,
             String bulkDelete, String studentCategories, String studentHouse, String disableReason) {
-
         String actualStudentDetailText = studentInformationPage.studentDetailsSubModule.getText();
         System.out.println(actualStudentDetailText);
         CommonUtils.assertEquals(actualStudentDetailText, studentDetails);
@@ -51,7 +49,6 @@ public class StudentInformationStepDef extends PageInitializer {
         String actualDisableReasonText = studentInformationPage.disableReasonSubModule.getText();
         System.out.println(actualDisableReasonText);
         CommonUtils.assertEquals(actualDisableReasonText, disableReason);
-        CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
     }
 }
