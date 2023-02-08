@@ -1,12 +1,10 @@
 package com.chroma.stepDefinitions;
 
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
-
 import com.aventstack.extentreports.model.Log;
 import com.chroma.appsCommon.PageInitializer;
 import com.chroma.pages.CTSMSNavigationModulesPage;
@@ -17,24 +15,18 @@ import com.chroma.pages.StudentInformationPage;
 import com.chroma.utils.CucumberLogUtils;
 import com.chroma.web.CommonUtils;
 import com.chroma.web.WebDriverUtils;
-
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class StudentInformationStepDef extends PageInitializer {
 
-    LoginPage loginPage = new LoginPage();
-    StudentInformationPage studentInformationPage = new StudentInformationPage();
-    CTSMSNavigationModulesPage cTSMSNavigationModulesPage = new CTSMSNavigationModulesPage();
-
-   
     @Given("a user logs in to the CTSMS website with valid credentials username{string} and password {string}")
     public void a_user_logs_in_to_the_CTSMS_website_with_valid_credentials_username_and_password(String username,
             String password) {
-                loginPage.userNameTextBox.sendKeys(username);
-                loginPage.passwordTextBox.sendKeys(password);
-                loginPage.signButton.click();
+        loginPage.userNameTextBox.sendKeys(username);
+        loginPage.passwordTextBox.sendKeys(password);
+        loginPage.signButton.click();
     }
 
     @Given("user clicks on Student Information section")

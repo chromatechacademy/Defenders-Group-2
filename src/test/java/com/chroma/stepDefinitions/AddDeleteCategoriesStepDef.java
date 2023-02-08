@@ -52,6 +52,7 @@ public class AddDeleteCategoriesStepDef extends PageInitializer {
         AddDeleteStudentCategoriesPage.categoryDeleteLocator(categoryName).click();
     }
 
+    
     @Then("Category is deleted")
     public void category_is_deleted() {
         CommonUtils.driver.switchTo().alert().accept();

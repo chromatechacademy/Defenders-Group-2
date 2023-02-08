@@ -1,16 +1,14 @@
 package com.chroma.pages;
 
-import java.util.List;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.chroma.web.WebDriverUtils;
 
 /*STUDENT INFORMATION MODULE */
 public class StudentInformationPage {
+
+    /*STUDENT INFORMATION TEXT */
     @FindBy(xpath = "//span[contains(text(),'Student Information')]")
     public WebElement StudentInformationModule;
 
@@ -45,6 +43,4 @@ public class StudentInformationPage {
     public StudentInformationPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
     }
-
 }
-
