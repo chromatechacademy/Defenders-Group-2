@@ -25,11 +25,17 @@ public class RealEstateDeleteAgentStepDef extends PageInitializer {
     @Then("admin user is able to create a new agent by adding first name {string}, last name {string}, email {string}, contact number {string}, password {string}")
     public void admin_user_is_able_to_create_a_new_agent_by_adding_first_name_last_name_email_contact_number_password(
             String fname, String lname, String email, String number, String password) {
+        realEstateNewAgentWindowPage.firstNameTextBox.clear();
         realEstateNewAgentWindowPage.firstNameTextBox.sendKeys(fname);
+        realEstateNewAgentWindowPage.lastNameTextBox.clear();
         realEstateNewAgentWindowPage.lastNameTextBox.sendKeys(lname);
+        realEstateNewAgentWindowPage.emailTextBox.clear();
         realEstateNewAgentWindowPage.emailTextBox.sendKeys(email);
+        realEstateNewAgentWindowPage.contactNumberTextBox.clear();
         realEstateNewAgentWindowPage.contactNumberTextBox.sendKeys(number);
+        realEstateNewAgentWindowPage.passwordTextBox.clear();
         realEstateNewAgentWindowPage.passwordTextBox.sendKeys(password);
+        realEstateNewAgentWindowPage.retypePasswordTextBox.clear();
         realEstateNewAgentWindowPage.retypePasswordTextBox.sendKeys(password);
         realEstateNewAgentWindowPage.saveButton.click();
         CucumberLogUtils.logExtentScreenshot();
@@ -80,5 +86,6 @@ public class RealEstateDeleteAgentStepDef extends PageInitializer {
         CommonUtils.assertEquals(deleteSuccess, actualDeleteSuccess);
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
+        realEstateInactiveAgentsPage.okayButton.click();
     }
 }

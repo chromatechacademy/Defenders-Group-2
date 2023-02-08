@@ -9,5 +9,5 @@ Feature: Real Estate - Validate Sold By and Reserved By Modules
         Then a pop-up displays with the text: "ID", "PROJECT", "PRICE", "BEDS", "BATHS", "CARS", "CAR LOTS", "STORAGE LOTS", "LEVEL", "ASPECT", "TOTAL AREA", "STATUS", "SOLD BY"
         And agent clicks on close button on a pop-up display
         Then clicks on "Reserved By Me"
-        And a pop-up displays with the text: ""ID", "PROJECT", "PRICE", "BEDS", "BATHS", "CARS", "CAR LOTS", "STORAGE LOTS", "LEVEL", "ASPECT", "TOTAL ARIA", "STATUS", "RESERVED BY"  
+        And a pop-up displays with the text: "ID", "PROJECT", "PRICE", "BEDS", "BATHS", "CARS", "CAR LOTS", "STORAGE LOTS", "LEVEL", "ASPECT", "TOTAL ARIA", "STATUS", "RESERVED BY"  
         Then agent clicks on close button on pop-up display      
