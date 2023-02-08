@@ -6,7 +6,6 @@ import org.openqa.selenium.support.PageFactory;
 import com.chroma.web.WebDriverUtils;
 
 public class DashboardPage {
-    
     /* ACADEMICS MODULE */
     @FindBy(xpath = "//span[contains(text(),'Academics')]")
     public WebElement academicsModule;
