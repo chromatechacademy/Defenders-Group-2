@@ -1,9 +1,11 @@
 package com.chroma.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.chroma.web.CommonUtils;
+import com.chroma.web.WebDriverUtils;
 
 public class CTSMSStudentAdmissionPage {
 
@@ -18,6 +20,12 @@ public class CTSMSStudentAdmissionPage {
 
     @FindBy(xpath = "//select[@id='class_id']")
     public WebElement classDropDown;
+
+    @FindBy(xpath = "//select[@name='class_id']")
+    public WebElement classDropDown2;
+
+    @FindBy(xpath = "//select[@name='section_id']")
+    public WebElement sectionDropDown2;
 
     @FindBy(xpath = "//select[@id='section_id']")
     public WebElement sectionDropDown;
@@ -51,6 +59,25 @@ public class CTSMSStudentAdmissionPage {
 
     @FindBy(xpath = "//p[contains(text(),'The Admission No field must contain a unique value')]")
     public WebElement admissionNumberMustBeUniqueMessage;
+
+    @FindBy(xpath = "//a[normalize-space()='Bulk Delete']")
+    public WebElement bulkDeleteModule;
+
+    @FindBy(xpath = "//button[normalize-space()='Search']")
+    public WebElement serchButtonBD;
+
+    @FindBy(xpath = "//select[@name='class_id']")
+    public WebElement classNameDropDown;
+
+    @FindBy(xpath = "//select[@name='section_id']")
+    public WebElement sectionNameDropDown;
+
+    @FindBy(xpath = "//button[normalize-space()='Delete']")
+    public WebElement deleteButton;
+
+    public static WebElement studentRecordLocator(String studentRecord){
+      return  WebDriverUtils.driver.findElement(By.xpath("//a[contains(text(),'" + studentRecord + "')]//parent::td//parent::tr/td/input"));
+    }
 
     public CTSMSStudentAdmissionPage() {
         PageFactory.initElements(CommonUtils.driver, this);
