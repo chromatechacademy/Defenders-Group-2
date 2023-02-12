@@ -6,17 +6,22 @@ import com.chroma.pages.AddDeleteStudentCategoriesPage;
 import com.chroma.pages.CTSMSNavigationModulesPage;
 import com.chroma.pages.CTSMSStudentAdmissionPage;
 import com.chroma.pages.DashboardPage;
+import com.chroma.pages.FeesCollectionModulePage;
+import com.chroma.pages.HomeworkModulePage;
 import com.chroma.pages.IncomeModulePage;
 import com.chroma.pages.LoginPage;
+import com.chroma.pages.RealEstateAgentsPage;
 import com.chroma.pages.RealEstateActiveAgentsPage;
 import com.chroma.pages.RealEstateAgentPage;
-import com.chroma.pages.RealEstateAgentsPage;
 import com.chroma.pages.RealEstateDashboardPage;
 import com.chroma.pages.RealEstateInactiveAgentsPage;
 import com.chroma.pages.RealEstateLoginPage;
+import com.chroma.pages.RealEstateProjectsPage;
 import com.chroma.pages.RealEstateNewAgentWindowPage;
 import com.chroma.pages.RealEstateSoldByReservedByPage;
+import com.chroma.pages.RealEstateValidateDashBoardGraphTextPage;
 import com.chroma.pages.SamplePage;
+import com.chroma.pages.StudentInformationPage;
 import com.chroma.pages.SectionsAndClassesPage;
 import com.chroma.pages.SectionsPage;
 import com.chroma.pages.StudentDetailsPage;
@@ -36,7 +41,10 @@ public class PageInitializer extends WebDriverUtils {
     public static RealEstateInactiveAgentsPage realEstateInactiveAgentsPage;
     public static CTSMSNavigationModulesPage cTSMSNavigationModulesPage;
     public static CTSMSStudentAdmissionPage cTSMSStudentAdmissionPage;
+    public static RealEstateProjectsPage realEstateProjectsPage;
     public static RealEstateDashboardPage realEstateDashboardPage;
+    public static StudentInformationPage studentInformationPage;
+    public static HomeworkModulePage homeworkModulePage;
     public static IncomeModulePage incomeModulePage;
     public static AddDeleteClassesPage addDeleteClassesPage;
     public static AddDeleteStudentCategoriesPage addDeleteStudentCategoriesPage;
@@ -45,7 +53,9 @@ public class PageInitializer extends WebDriverUtils {
     public static SectionsAndClassesPage sectionsAndClassesPage;
     public static StudentDetailsPage studentDetailsPage;
     public static RealEstateSoldByReservedByPage realEstateSoldByReservedByPage;
-
+    public static FeesCollectionModulePage feesCollectionModulePage;
+    public static RealEstateValidateDashBoardGraphTextPage realEstateValidateDashBoardGraphTextPage;
+   
     public void initializeAllPages() {
 
         samplePage = new SamplePage();
@@ -61,6 +71,12 @@ public class PageInitializer extends WebDriverUtils {
         cTSMSNavigationModulesPage = new CTSMSNavigationModulesPage();
         cTSMSStudentAdmissionPage = new CTSMSStudentAdmissionPage();
         realEstateDashboardPage = new RealEstateDashboardPage();
+        realEstateProjectsPage = new RealEstateProjectsPage();
+        realEstateAgentsPage = new RealEstateAgentsPage();
+        studentInformationPage = new StudentInformationPage();
+        homeworkModulePage = new HomeworkModulePage();
+        addDeleteStudentCategoriesPage = new AddDeleteStudentCategoriesPage();
+        realEstateAgentPage = new RealEstateAgentPage();
         incomeModulePage = new IncomeModulePage();
         addDeleteStudentCategoriesPage = new AddDeleteStudentCategoriesPage();
         realEstateAgentPage = new RealEstateAgentPage();
@@ -69,5 +85,10 @@ public class PageInitializer extends WebDriverUtils {
         sectionsAndClassesPage = new SectionsAndClassesPage();
         studentDetailsPage = new StudentDetailsPage();
         realEstateSoldByReservedByPage = new RealEstateSoldByReservedByPage();
+        feesCollectionModulePage = new FeesCollectionModulePage();
+        realEstateValidateDashBoardGraphTextPage = new RealEstateValidateDashBoardGraphTextPage();
+        homeworkModulePage = new HomeworkModulePage();
+        studentInformationPage = new StudentInformationPage();
+        feesCollectionModulePage = new FeesCollectionModulePage();
     }
 }

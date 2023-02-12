@@ -6,12 +6,48 @@ import org.openqa.selenium.support.PageFactory;
 import com.chroma.web.WebDriverUtils;
 
 public class RealEstateAgentsPage {
+    
+    /* Members List Module*/
+    @FindBy(xpath = "//button[@class='sidebar-item']")
+    public WebElement membersListModule;
 
-    /* ADD NOW LOCATOR */
-    @FindBy(xpath = "//button[normalize-space()='Add Now']")
-    public WebElement addNowButton;
+    /* Active Module */
+    @FindBy(xpath = "//a[normalize-space()='Active']")
+    public WebElement activeModule;
 
-    public RealEstateAgentsPage() {
+    /* Inactive Module */
+    @FindBy(xpath = "//a[normalize-space()='Inactive']")
+    public WebElement inactiveModule;
+
+    /* All Agents Module */
+    @FindBy(xpath = "//a[normalize-space()='All Agents']")
+    public WebElement allAgentModule;
+
+    /* Add Now Module */
+    @FindBy(xpath = "//button[@class='btn btn-primary d-block w-100']")
+    public WebElement addNowModule;
+
+    /* Name Text */
+    @FindBy(xpath = "//th[normalize-space()='Name']")
+    public WebElement nameText;
+
+    /* Mail Text */
+    @FindBy(xpath = "//th[normalize-space()='Mail']")
+    public WebElement mailText;
+
+    /* Contact Number Text */
+    @FindBy(xpath = "//th[normalize-space()='Contact Number']")
+    public WebElement contactNumberText;
+
+    /* Actions Text */
+    @FindBy(xpath = "//th[@class='text-end']")
+    public WebElement actionsText;
+
+     /* ADD NOW LOCATOR */
+     @FindBy(xpath = "//button[normalize-space()='Add Now']")
+     public WebElement addNowButton;
+
+    public RealEstateAgentsPage(){
         PageFactory.initElements(WebDriverUtils.driver, this);
     }
 }
