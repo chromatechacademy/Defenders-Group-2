@@ -22,7 +22,6 @@ Feature: Student Admission
         And clicks search button
         Then admitted student with first name "<FIRST NAME>" and last name "<LAST NAME>" is deleted for testing purposes
 
-
         Examples:
 
             | URL                                | USERNAME            | PASSWORD | ADMISSION NUMBER | CLASS | SECTION              | FIRST NAME | LAST NAME | GENDER | DOB        | MOTHERS NAME | GUARDIAN PHONE NUMBER |
