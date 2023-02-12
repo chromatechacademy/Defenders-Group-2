@@ -1,6 +1,7 @@
 package com.chroma.stepDefinitions;
 
 import com.chroma.appsCommon.PageInitializer;
+import com.chroma.pages.CTSMSStudentAdmissionPage;
 import com.chroma.utils.CucumberLogUtils;
 import com.chroma.web.CommonUtils;
 import com.chroma.web.JavascriptUtils;
@@ -23,6 +24,8 @@ public class CTSMSStudentAdmissionStepDef extends PageInitializer {
     public void user_is_directed_to_Student_Admission_Page_with_the_text(String expectedHeaderText) {
         String actualHeaderText = cTSMSStudentAdmissionPage.studentAdmissionHeader.getText();
         CommonUtils.assertEquals(actualHeaderText, expectedHeaderText);
+        CucumberLogUtils.logScreenShot();
+        CucumberLogUtils.logExtentScreenshot();
     }
 
     @Then("enters Student unique Admission Number {string}")
@@ -82,4 +85,38 @@ public class CTSMSStudentAdmissionStepDef extends PageInitializer {
         CommonUtils.assertEquals(actualSuccessMessage, expectedSuccessMessage);
         Thread.sleep(2000);
     }
+
+    @When("user navigates to Bulk Delete submodule")
+    public void user_navigates_to_Bulk_Delete_submodule() {
+        cTSMSStudentAdmissionPage.bulkDeleteModule.click();
+        CommonUtils.sleep(500);
+    }
+    
+    @When("for Bulk Delete selects Class {string} and Section {string}")
+    public void for_Bulk_Delete_selects_Class_and_Section(String className, String sectionName) {
+        cTSMSStudentAdmissionPage.classDropDown2.click();
+        CommonUtils.selectDropDownValue(cTSMSStudentAdmissionPage.classDropDown2,1);
+        cTSMSStudentAdmissionPage.sectionDropDown2.click();
+        CommonUtils.selectDropDownValue(cTSMSStudentAdmissionPage.sectionDropDown2,2);
+    }
+
+    @When("clicks search button")
+    public void clicks_search_button() {
+        cTSMSStudentAdmissionPage.serchButtonBD.click();
+    }
+
+    @Then("admitted student with first name {string} and last name {string} is deleted for testing purposes")
+    public void admitted_student_with_first_name_and_last_name_is_deleted_for_testing_purposes(String firstName,
+            String lastName) throws InterruptedException {
+        if (CTSMSStudentAdmissionPage.studentRecordLocator(firstName + " " + lastName).isDisplayed()) {
+            CTSMSStudentAdmissionPage.studentRecordLocator(firstName + " " + lastName).click();
+            Thread.sleep(2000);
+            CucumberLogUtils.logScreenShot();
+            CucumberLogUtils.logExtentScreenshot();
+            cTSMSStudentAdmissionPage.deleteButton.click();
+            Thread.sleep(2000);
+            CommonUtils.driver.switchTo().alert().accept();
+        }
+    }
 }
+
