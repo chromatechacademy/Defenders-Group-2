@@ -24,6 +24,8 @@ public class CTSMSStudentAdmissionStepDef extends PageInitializer {
     public void user_is_directed_to_Student_Admission_Page_with_the_text(String expectedHeaderText) {
         String actualHeaderText = cTSMSStudentAdmissionPage.studentAdmissionHeader.getText();
         CommonUtils.assertEquals(actualHeaderText, expectedHeaderText);
+        CucumberLogUtils.logScreenShot();
+        CucumberLogUtils.logExtentScreenshot();
     }
 
     @Then("enters Student unique Admission Number {string}")
@@ -107,7 +109,6 @@ public class CTSMSStudentAdmissionStepDef extends PageInitializer {
     public void admitted_student_with_first_name_and_last_name_is_deleted_for_testing_purposes(String firstName,
             String lastName) throws InterruptedException {
         if (CTSMSStudentAdmissionPage.studentRecordLocator(firstName + " " + lastName).isDisplayed()) {
-
             CTSMSStudentAdmissionPage.studentRecordLocator(firstName + " " + lastName).click();
             Thread.sleep(2000);
             CucumberLogUtils.logScreenShot();
