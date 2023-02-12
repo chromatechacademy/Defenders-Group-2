@@ -116,7 +116,6 @@ public class CTSMSStudentAdmissionStepDef extends PageInitializer {
             CucumberLogUtils.logExtentScreenshot();
             cTSMSStudentAdmissionPage.deleteButton.click();
             Thread.sleep(2000);
-
             CommonUtils.driver.switchTo().alert().accept();
         }
     }
