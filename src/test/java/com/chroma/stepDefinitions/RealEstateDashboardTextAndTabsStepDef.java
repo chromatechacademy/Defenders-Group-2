@@ -3,6 +3,7 @@ package com.chroma.stepDefinitions;
 import com.chroma.appsCommon.PageInitializer;
 import com.chroma.utils.CucumberLogUtils;
 import com.chroma.web.CommonUtils;
+import com.chroma.web.JavascriptUtils;
 import com.chroma.web.WebDriverUtils;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -16,6 +17,8 @@ public class RealEstateDashboardTextAndTabsStepDef extends PageInitializer {
 
     @Given("admin logs in with valid credentials email {string} and password {string}")
     public void admin_logs_in_with_valid_credentials_email_and_password(String email, String password) throws InterruptedException {
+        JavascriptUtils.scrollIntoView(realEstateLoginPage.loginButton);
+        CommonUtils.sleep(2000);
         realEstateLoginPage.emailUserTextBox.sendKeys(email);
         realEstateLoginPage.passwordUserTextBox.sendKeys(password);
         realEstateLoginPage.loginButton.click();
