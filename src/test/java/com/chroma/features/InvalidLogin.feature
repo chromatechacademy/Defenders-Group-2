@@ -1,7 +1,7 @@
 Feature: Invalid Credentials Login Test Scenario
 Description: Testing Invaild Credentials Login For Security Purposes
 
-  @CTSMSRegression @Samuel @DG2-2
+  @CTSMSRegression @Samuel @DG2-2 @CTSMSSmoke
   Scenario Outline: Invalid Credentials Login
     Given a user is on the login page "https://chroma.mexil.it/site/login"
     When user logs in with invaild credentials username "<USERNAME>" and password "<PASSWORD>"

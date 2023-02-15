@@ -27,7 +27,7 @@ public class CTSMSStudentAdmissionStepImpl extends PageInitializer {
     }
 
     /* User Enters Student Unique Admission Number */
-    public static void studentUniqueAdmissionNumber(String admissionNumber) throws InterruptedException {
+    public static void studentUniqueAdmissionNumber(String admissionNumber){
         cTSMSStudentAdmissionPage.studentAdmissionNumberTextBox.sendKeys(admissionNumber);
         CommonUtils.sleep(2000);
         CommonUtils.nonMobileScreenshots();
@@ -84,7 +84,7 @@ public class CTSMSStudentAdmissionStepImpl extends PageInitializer {
     }
 
     /* User Succesfully Saved And Confirmation Message Displayed */
-    public static void studentSavedAndConfirmationMessage(String expectedSuccessMessage) throws InterruptedException {
+    public static void studentSavedAndConfirmationMessage(String expectedSuccessMessage){
         String actualSuccessMessage = cTSMSStudentAdmissionPage.succesfulySavedMessage.getText();
         CommonUtils.nonMobileScreenshots();
         CommonUtils.assertEquals(actualSuccessMessage, expectedSuccessMessage);
@@ -116,8 +116,7 @@ public class CTSMSStudentAdmissionStepImpl extends PageInitializer {
     /*
      * Admitted Student With First Name And Last Name is Delete for Testing Purposes
      */
-    public static void deletedAdmittedStudentForTestingPurposes(String firstName,
-            String lastName) throws InterruptedException {
+    public static void deletedAdmittedStudentForTestingPurposes(String firstName, String lastName){
         if (CTSMSStudentAdmissionPage.studentRecordLocator(firstName + " " + lastName).isDisplayed()) {
             CTSMSStudentAdmissionPage.studentRecordLocator(firstName + " " + lastName).click();
             CommonUtils.sleep(2000);

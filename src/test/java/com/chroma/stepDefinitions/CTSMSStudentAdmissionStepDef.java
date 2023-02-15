@@ -23,7 +23,7 @@ public class CTSMSStudentAdmissionStepDef extends PageInitializer {
     }
 
     @Then("enters Student unique Admission Number {string}")
-    public void enters_Student_unique_Admission_Number(String admissionNumber) throws InterruptedException {
+    public void enters_Student_unique_Admission_Number(String admissionNumber) {
         CTSMSStudentAdmissionStepImpl.studentUniqueAdmissionNumber(admissionNumber);
     }
 
@@ -68,8 +68,7 @@ public class CTSMSStudentAdmissionStepDef extends PageInitializer {
     }
 
     @Then("student is succesfuly saved and confirmation message is displayed {string}")
-    public void student_is_succesfuly_saved_and_confirmation_message_is_displayed(String expectedSuccessMessage)
-            throws InterruptedException {
+    public void student_is_succesfuly_saved_and_confirmation_message_is_displayed(String expectedSuccessMessage){
         CTSMSStudentAdmissionStepImpl.studentSavedAndConfirmationMessage(expectedSuccessMessage);
     }
 
@@ -90,7 +89,7 @@ public class CTSMSStudentAdmissionStepDef extends PageInitializer {
 
     @Then("admitted student with first name {string} and last name {string} is deleted for testing purposes")
     public void admitted_student_with_first_name_and_last_name_is_deleted_for_testing_purposes(String firstName,
-            String lastName) throws InterruptedException {
+            String lastName){
         CTSMSStudentAdmissionStepImpl.deletedAdmittedStudentForTestingPurposes(firstName, lastName);
         }
 }

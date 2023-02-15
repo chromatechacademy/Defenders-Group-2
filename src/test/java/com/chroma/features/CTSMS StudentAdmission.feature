@@ -1,6 +1,6 @@
 Feature: Student Admission
 
-    @CTSMSRegression @Natalya @DG2-12
+    @CTSMSRegression @Natalya @DG2-12 @CTSMSSmoke
     Scenario Outline: Student Admission
         Given a user is on the login page "<URL>"
         When user logs in with valid credentials username "<USERNAME>" and password "<PASSWORD>"
