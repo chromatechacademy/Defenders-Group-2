@@ -1,30 +1,19 @@
-package com.chroma.stepDefinitions;
+package com.chroma.stepsImplementation;
 
 import com.chroma.appsCommon.PageInitializer;
-<<<<<<< HEAD
-import com.chroma.pages.DashboardPage;
-import com.chroma.utils.ConfigReader;
 import com.chroma.web.CommonUtils;
-=======
-import com.chroma.stepsImplementation.DashboardStepImpl;
->>>>>>> d37f4a0010f919e85f377489e8dbfff579daf2dc
-import cucumber.api.java.en.Then;
 
-public class DashboardStepDef extends PageInitializer {
-   
-    @Then("clicks on the hamburger menu")
-    public void clicks_on_the_hamburger_menu() {
-        DashboardStepImpl.userClicksHamburgerMenu();
+public class DashboardStepImpl extends PageInitializer {
+
+    /* User clicks On Hamburger Menu  */
+    public static void userClicksHamburgerMenu() {
+        cTSMSNavigationModulesPage.hamburgerMenu.click();
+        CommonUtils.nonMobileScreenshots();
     }
 
-    @Then("the following modules should displayed {string}, {string}, {string}, {string}, {string}, {string}, {string}, {string}")
-    public void the_following_modules_should_displayed(String studentInformation, String feesCollection, String income,
-<<<<<<< HEAD
-            String expences,
-            String academics, String humanResource, String homework, String reports) {
-        if (ConfigReader.getPropertyValue("browser").equalsIgnoreCase(("mobile"))) {
-            DashboardPage.dashboardHamburger().click();
-        }
+    /* User Sees Modules Displayed */
+    public static void userSeesModuleDisplayed(String studentInformation, String feesCollection, String income,
+            String expences, String academics, String humanResource, String homework, String reports) {
         String actualStudentInfoText = cTSMSNavigationModulesPage.studentInformationModule.getText();
         CommonUtils.assertEquals(actualStudentInfoText, studentInformation);
         String actualFeesCollectionText = cTSMSNavigationModulesPage.feesCollectionModule.getText();
@@ -42,10 +31,5 @@ public class DashboardStepDef extends PageInitializer {
         String actualReportsModuleText = cTSMSNavigationModulesPage.reportsModule.getText();
         CommonUtils.assertEquals(actualReportsModuleText, reports);
         CommonUtils.nonMobileScreenshots();
-=======
-            String expences,String academics, String humanResource, String homework, String reports) {
-        DashboardStepImpl.userSeesModuleDisplayed(
-                studentInformation, feesCollection, income, expences, academics, humanResource, homework, reports);
->>>>>>> d37f4a0010f919e85f377489e8dbfff579daf2dc
     }
 }

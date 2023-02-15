@@ -1,40 +1,28 @@
-package com.chroma.stepDefinitions;
+package com.chroma.stepsImplementation;
 
 import com.chroma.appsCommon.PageInitializer;
-<<<<<<< HEAD
 import com.chroma.web.CommonUtils;
-=======
-import com.chroma.stepsImplementation.HumanResourceModuleStepImpl;
->>>>>>> d37f4a0010f919e85f377489e8dbfff579daf2dc
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
 
-public class HumanResourceModuleStepDef extends PageInitializer {
+public class HumanResourceModuleStepImpl extends PageInitializer {
 
-    @Given("user logs in with valid credentials username {string} and password {string}")
-    public void user_logs_in_with_valid_credentials_username_and_password(String username, String password)
-            throws InterruptedException {
-<<<<<<< HEAD
+    /* User Logs In With Valid Credentials */
+    public static void userLogsIn(String username, String password){
         loginPage.userNameTextBox.sendKeys(username);
         loginPage.passwordTextBox.sendKeys(password);
         loginPage.signButton.click();
         CommonUtils.nonMobileScreenshots();
-=======
-        HumanResourceModuleStepImpl.userLogsIn(username, password);
->>>>>>> d37f4a0010f919e85f377489e8dbfff579daf2dc
     }
 
-    @Given("navigates to Human Resource")
-    public void navigates_to_Human_Resource() {
-        HumanResourceModuleStepImpl.userNavigatesToHumanResource();
+    /* User Navigates To Human Resource */
+    public static void userNavigatesToHumanResource() {
+        academyDashBoardPage.humanResourceModule.click();
+        CommonUtils.nonMobileScreenshots();
     }
 
-    @Then("the following sub modules should be displayed {string}, {string}, {string}, {string}, {string}, {string}, {string}, {string}, {string}")
-    public void the_following_sub_modules_should_be_displayed(String staffDirectory, String staffAttendance,
-            String payroll,
+    /* User Sees Human Resource Sub Module */
+    public static void humanResourceSubModule(String staffDirectory, String staffAttendance,String payroll,
             String approveLeaveRequest, String applyLeave, String leaveType, String teachersRating, String department,
             String designation) {
-<<<<<<< HEAD
         String staffDirectorySubModule = academyDashBoardPage.staffDirectorySubModule.getText();
         CommonUtils.assertEquals(staffDirectory, staffDirectorySubModule);
         String staffAttendanceSubModule = academyDashBoardPage.staffAttendanceSubModule.getText();
@@ -54,9 +42,5 @@ public class HumanResourceModuleStepDef extends PageInitializer {
         String designationSubModule = academyDashBoardPage.designationSubModule.getText();
         CommonUtils.assertEquals(designation, designationSubModule);
         CommonUtils.nonMobileScreenshots();
-=======
-      HumanResourceModuleStepImpl.humanResourceSubModule(
-              staffDirectory, staffAttendance, payroll, approveLeaveRequest, applyLeave, leaveType, teachersRating, department, designation);
->>>>>>> d37f4a0010f919e85f377489e8dbfff579daf2dc
     }
 }

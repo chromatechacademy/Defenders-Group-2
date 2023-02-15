@@ -1,7 +1,7 @@
-Feature: Validate dashBoard Graph Text
-Discription: Testing DashBoard Graph Text
+Feature: Validate Dashboard Graph Text
+Description: Testing Dashboard Graph Text
 
-  @RealEstateRegression @Menalka @DG2-43
+  @RealEstateRegression @Menalka @DG2-43 @RealEstateSmoke
   Scenario: As an admin user , when I navigate to the dashboard and click Agents Graph, the graph should
     be displayed with header text Reserved by Agents.and clicks Overview, the graph should be displayed with the header text Properties overview.
     Given a real estate admin is on the login page "https://chroma-tech-academy.mexil.it/chroma_real_estate/project_files/admin/login.php"
@@ -11,4 +11,4 @@ Discription: Testing DashBoard Graph Text
     And Clicks the text "Agents Graph"
     And the graph should be displayed with header text "Reserved by Agents"
     And clicks on the text Overview
-    And the graph should be displayed with a header text "Properties Overview"
+    Then the graph should be displayed with a header text "Properties Overview"

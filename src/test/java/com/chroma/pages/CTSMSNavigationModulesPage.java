@@ -7,6 +7,10 @@ import org.openqa.selenium.support.PageFactory;
 import com.chroma.web.WebDriverUtils;
 
 public class CTSMSNavigationModulesPage {
+    
+     /* Hamburger Menu */
+     @FindBy(xpath = "//a[@role='button']")
+     public WebElement hamburgerMenu;
 
     /* Student Info Module */
     @FindBy(xpath = "//span[contains(text(),'Student Information')]")
