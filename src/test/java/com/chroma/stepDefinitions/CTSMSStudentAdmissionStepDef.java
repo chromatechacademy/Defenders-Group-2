@@ -6,7 +6,6 @@ import com.chroma.pages.DashboardPage;
 import com.chroma.stepsImplementation.CTSMSStudentAdmissionStepImpl;
 import com.chroma.utils.ConfigReader;
 import com.chroma.web.CommonUtils;
-import com.chroma.web.JavascriptUtils;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 

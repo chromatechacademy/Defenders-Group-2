@@ -1,6 +1,7 @@
 package com.chroma.stepDefinitions;
 
 import com.chroma.appsCommon.PageInitializer;
+import com.chroma.stepsImplementation.HumanResourceModuleStepImpl;
 import com.chroma.web.CommonUtils;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
