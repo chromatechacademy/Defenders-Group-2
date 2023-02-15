@@ -1,5 +1,6 @@
 package com.chroma.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -16,8 +17,8 @@ public class DashboardPage {
 
     /* INCOME MODULE */
     @FindBy(xpath = "//span[normalize-space()='Income']")
-    public WebElement IncomeModule; 
-    
+    public WebElement IncomeModule;
+
     /* CLASS SUBMODULE */
     @FindBy(xpath = "//a[normalize-space()='Class']")
     public WebElement classSubModule;
@@ -25,6 +26,11 @@ public class DashboardPage {
     /* STUDENT DETAILS SUBMODULE */
     @FindBy(xpath = "//ul[@class='treeview-menu']//a[normalize-space()='Student Details']")
     public WebElement studentDetailsSubModule;
+
+    /* HAMBURGER MENU */
+    public static WebElement dashboardHamburger() {
+        return WebDriverUtils.driver.findElement(By.xpath("//a[@role='button']"));
+    }
 
     public DashboardPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);

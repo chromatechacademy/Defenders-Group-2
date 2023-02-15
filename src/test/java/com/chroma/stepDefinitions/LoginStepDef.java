@@ -2,7 +2,7 @@ package com.chroma.stepDefinitions;
 
 import org.testng.Assert;
 import com.chroma.appsCommon.PageInitializer;
-import com.chroma.utils.CucumberLogUtils;
+import com.chroma.web.CommonUtils;
 import com.chroma.web.WebDriverUtils;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -13,8 +13,7 @@ public class LoginStepDef extends PageInitializer {
     @Given("Chroma Tech Academy teacher\\/admin is on a login page {string}")
     public void chroma_Tech_Academy_teacher_admin_is_on_a_login_page(String url) {
         WebDriverUtils.driver.get(url);
-        CucumberLogUtils.logExtentScreenshot();
-        CucumberLogUtils.logScreenShot();
+        CommonUtils.nonMobileScreenshots();
     }
 
     @When("Chroma Tech Academy teacher\\/admin logs in with valid credentials username {string} and password {string}")
@@ -22,8 +21,7 @@ public class LoginStepDef extends PageInitializer {
             String password) {
         loginPage.userNameTextBox.sendKeys(login);
         loginPage.passwordTextBox.sendKeys(password);
-        CucumberLogUtils.logExtentScreenshot();
-        CucumberLogUtils.logScreenShot();
+        CommonUtils.nonMobileScreenshots();
         loginPage.signButton.click();
     }
 
@@ -31,7 +29,6 @@ public class LoginStepDef extends PageInitializer {
     public void chroma_Tech_Academy_teacher_admin_is_succesfully_loged_in_on_CTSMS_web_page(String url) {
         String actualHomePageURL = WebDriverUtils.driver.getCurrentUrl();
         Assert.assertEquals(actualHomePageURL, url);
-        CucumberLogUtils.logExtentScreenshot();
-        CucumberLogUtils.logScreenShot();
+        CommonUtils.nonMobileScreenshots();
     }
 }

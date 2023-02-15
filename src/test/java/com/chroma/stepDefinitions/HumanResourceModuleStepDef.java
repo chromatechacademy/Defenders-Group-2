@@ -1,7 +1,6 @@
 package com.chroma.stepDefinitions;
 
 import com.chroma.appsCommon.PageInitializer;
-import com.chroma.utils.CucumberLogUtils;
 import com.chroma.web.CommonUtils;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -14,8 +13,7 @@ public class HumanResourceModuleStepDef extends PageInitializer {
         loginPage.userNameTextBox.sendKeys(username);
         loginPage.passwordTextBox.sendKeys(password);
         loginPage.signButton.click();
-        CucumberLogUtils.logScreenShot();
-        CucumberLogUtils.logExtentScreenshot();
+        CommonUtils.nonMobileScreenshots();
     }
 
     @Given("navigates to Human Resource")
@@ -46,7 +44,6 @@ public class HumanResourceModuleStepDef extends PageInitializer {
         CommonUtils.assertEquals(department, departmentSubModule);
         String designationSubModule = academyDashBoardPage.designationSubModule.getText();
         CommonUtils.assertEquals(designation, designationSubModule);
-        CucumberLogUtils.logScreenShot();
-        CucumberLogUtils.logExtentScreenshot();
+        CommonUtils.nonMobileScreenshots();
     }
 }

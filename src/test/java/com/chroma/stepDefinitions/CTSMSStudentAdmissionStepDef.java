@@ -2,7 +2,8 @@ package com.chroma.stepDefinitions;
 
 import com.chroma.appsCommon.PageInitializer;
 import com.chroma.pages.CTSMSStudentAdmissionPage;
-import com.chroma.utils.CucumberLogUtils;
+import com.chroma.pages.DashboardPage;
+import com.chroma.utils.ConfigReader;
 import com.chroma.web.CommonUtils;
 import com.chroma.web.JavascriptUtils;
 import cucumber.api.java.en.Then;
@@ -12,6 +13,9 @@ public class CTSMSStudentAdmissionStepDef extends PageInitializer {
 
     @When("navigates to Student Information Module")
     public void navigates_to_Student_Information_Module() {
+        if (ConfigReader.getPropertyValue("browser").equalsIgnoreCase(("mobile"))) {
+            DashboardPage.dashboardHamburger().click();
+        }
         cTSMSNavigationModulesPage.studentInformationModule.click();
     }
 
@@ -24,14 +28,12 @@ public class CTSMSStudentAdmissionStepDef extends PageInitializer {
     public void user_is_directed_to_Student_Admission_Page_with_the_text(String expectedHeaderText) {
         String actualHeaderText = cTSMSStudentAdmissionPage.studentAdmissionHeader.getText();
         CommonUtils.assertEquals(actualHeaderText, expectedHeaderText);
-        CucumberLogUtils.logScreenShot();
-        CucumberLogUtils.logExtentScreenshot();
+        CommonUtils.nonMobileScreenshots();
     }
 
     @Then("enters Student unique Admission Number {string}")
-    public void enters_Student_unique_Admission_Number(String admissionNumber) throws InterruptedException {
+    public void enters_Student_unique_Admission_Number(String admissionNumber) {
         cTSMSStudentAdmissionPage.studentAdmissionNumberTextBox.sendKeys(admissionNumber);
-        Thread.sleep(2000);
     }
 
     @Then("selects Class {string} and Section {string}")
@@ -77,13 +79,10 @@ public class CTSMSStudentAdmissionStepDef extends PageInitializer {
     }
 
     @Then("student is succesfuly saved and confirmation message is displayed {string}")
-    public void student_is_succesfuly_saved_and_confirmation_message_is_displayed(String expectedSuccessMessage)
-            throws InterruptedException {
+    public void student_is_succesfuly_saved_and_confirmation_message_is_displayed(String expectedSuccessMessage) {
         String actualSuccessMessage = cTSMSStudentAdmissionPage.succesfulySavedMessage.getText();
-        CucumberLogUtils.logScreenShot();
-        CucumberLogUtils.logExtentScreenshot();
+        CommonUtils.nonMobileScreenshots();
         CommonUtils.assertEquals(actualSuccessMessage, expectedSuccessMessage);
-        Thread.sleep(2000);
     }
 
     @When("user navigates to Bulk Delete submodule")
@@ -91,13 +90,13 @@ public class CTSMSStudentAdmissionStepDef extends PageInitializer {
         cTSMSStudentAdmissionPage.bulkDeleteModule.click();
         CommonUtils.sleep(500);
     }
-    
+
     @When("for Bulk Delete selects Class {string} and Section {string}")
     public void for_Bulk_Delete_selects_Class_and_Section(String className, String sectionName) {
         cTSMSStudentAdmissionPage.classDropDown2.click();
-        CommonUtils.selectDropDownValue(cTSMSStudentAdmissionPage.classDropDown2,1);
+        CommonUtils.selectDropDownValue(className, cTSMSStudentAdmissionPage.classDropDown2);
         cTSMSStudentAdmissionPage.sectionDropDown2.click();
-        CommonUtils.selectDropDownValue(cTSMSStudentAdmissionPage.sectionDropDown2,2);
+        CommonUtils.selectDropDownValue(sectionName, cTSMSStudentAdmissionPage.sectionDropDown2);
     }
 
     @When("clicks search button")
@@ -111,12 +110,10 @@ public class CTSMSStudentAdmissionStepDef extends PageInitializer {
         if (CTSMSStudentAdmissionPage.studentRecordLocator(firstName + " " + lastName).isDisplayed()) {
             CTSMSStudentAdmissionPage.studentRecordLocator(firstName + " " + lastName).click();
             Thread.sleep(2000);
-            CucumberLogUtils.logScreenShot();
-            CucumberLogUtils.logExtentScreenshot();
+            CommonUtils.nonMobileScreenshots();
             cTSMSStudentAdmissionPage.deleteButton.click();
             Thread.sleep(2000);
             CommonUtils.driver.switchTo().alert().accept();
         }
     }
 }
-
