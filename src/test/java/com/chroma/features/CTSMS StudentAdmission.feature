@@ -1,9 +1,10 @@
 Feature: Student Admission
 
-    @CTSMSRegression @Natalya @DG2-12
+    @CTSMSRegression @Natalya @DG2-12 @CTSMSProgression
     Scenario Outline: Student Admission
         Given a user is on the login page "<URL>"
         When user logs in with valid credentials username "<USERNAME>" and password "<PASSWORD>"
+        And clicks on the hamburger menu
         And navigates to Student Information Module
         And navigates to Student Admition Submodule
         Then user is directed to Student Admission Page with the text "Student Admission"
@@ -17,6 +18,7 @@ Feature: Student Admission
         And enters Guardian Phone Number "<PHONE NUMBER>"
         And clicks on the Save button
         Then student is succesfuly saved and confirmation message is displayed "Record Saved Successfully"
+        And clicks on the hamburger menu
         When user navigates to Bulk Delete submodule
         And for Bulk Delete selects Class "<CLASS>" and Section "<SECTION>"
         And clicks search button
@@ -25,4 +27,4 @@ Feature: Student Admission
         Examples:
 
             | URL                                | USERNAME            | PASSWORD | ADMISSION NUMBER | CLASS | SECTION              | FIRST NAME | LAST NAME | GENDER | DOB        | MOTHERS NAME | GUARDIAN PHONE NUMBER |
-            | https://chroma.mexil.it/site/login | general@teacher.com | 123456   | 8793433        | SDET  | Testing Fundamentals | Nata       | TECH      | Female | 04/01/1987 | CHROMA MOM   | 7036875816            |
+            | https://chroma.mexil.it/site/login | general@teacher.com | 123456   | 8793434        | SDET  | Testing Fundamentals | Nata       | TECH      | Female | 04/01/1987 | CHROMA MOM   | 7036875816            |
