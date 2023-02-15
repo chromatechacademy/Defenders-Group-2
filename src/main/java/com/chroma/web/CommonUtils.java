@@ -519,12 +519,21 @@ public class CommonUtils extends WebDriverUtils {
 	}
 
 	/**
-	 * USE THIS METHOD TO TAKE SCREENSHOTSFOR NON MOBILE TESTING
+	 * USE THIS METHOD TO TAKE SCREENSHOTS FOR NON MOBILE TESTING
 	 */
 	public static void nonMobileScreenshots() {
 		if (!ConfigReader.getPropertyValue("browser").equalsIgnoreCase(("mobile"))) {
 			CucumberLogUtils.logScreenShot();
 			CucumberLogUtils.logExtentScreenshot();
+		}
+	}
+
+	/**
+	 * USE THIS METHOD TO ACCEPT ALLERTS
+	 */
+	public static void nonMobileAutoAcceptAlert() {
+		if (!ConfigReader.getPropertyValue("browser").equalsIgnoreCase(("mobile"))) {
+			CommonUtils.acceptAlert();
 		}
 	}
 }

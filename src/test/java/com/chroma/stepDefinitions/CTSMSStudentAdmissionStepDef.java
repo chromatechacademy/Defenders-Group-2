@@ -3,6 +3,7 @@ package com.chroma.stepDefinitions;
 import com.chroma.appsCommon.PageInitializer;
 import com.chroma.pages.CTSMSStudentAdmissionPage;
 import com.chroma.pages.DashboardPage;
+import com.chroma.stepsImplementation.CTSMSStudentAdmissionStepImpl;
 import com.chroma.utils.ConfigReader;
 import com.chroma.web.CommonUtils;
 import com.chroma.web.JavascriptUtils;
@@ -112,4 +113,5 @@ public class CTSMSStudentAdmissionStepDef extends PageInitializer {
             Thread.sleep(2000);
             CommonUtils.driver.switchTo().alert().accept();
         }
+}
 }

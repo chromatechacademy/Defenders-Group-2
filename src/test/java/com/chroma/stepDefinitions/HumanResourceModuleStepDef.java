@@ -10,14 +10,10 @@ public class HumanResourceModuleStepDef extends PageInitializer {
     @Given("user logs in with valid credentials username {string} and password {string}")
     public void user_logs_in_with_valid_credentials_username_and_password(String username, String password)
             throws InterruptedException {
-<<<<<<< HEAD
         loginPage.userNameTextBox.sendKeys(username);
         loginPage.passwordTextBox.sendKeys(password);
         loginPage.signButton.click();
         CommonUtils.nonMobileScreenshots();
-=======
-        HumanResourceModuleStepImpl.userLogsIn(username, password);
->>>>>>> d37f4a0010f919e85f377489e8dbfff579daf2dc
     }
 
     @Given("navigates to Human Resource")
@@ -30,7 +26,6 @@ public class HumanResourceModuleStepDef extends PageInitializer {
             String payroll,
             String approveLeaveRequest, String applyLeave, String leaveType, String teachersRating, String department,
             String designation) {
-<<<<<<< HEAD
         String staffDirectorySubModule = academyDashBoardPage.staffDirectorySubModule.getText();
         CommonUtils.assertEquals(staffDirectory, staffDirectorySubModule);
         String staffAttendanceSubModule = academyDashBoardPage.staffAttendanceSubModule.getText();
@@ -50,9 +45,5 @@ public class HumanResourceModuleStepDef extends PageInitializer {
         String designationSubModule = academyDashBoardPage.designationSubModule.getText();
         CommonUtils.assertEquals(designation, designationSubModule);
         CommonUtils.nonMobileScreenshots();
-=======
-      HumanResourceModuleStepImpl.humanResourceSubModule(
-              staffDirectory, staffAttendance, payroll, approveLeaveRequest, applyLeave, leaveType, teachersRating, department, designation);
->>>>>>> d37f4a0010f919e85f377489e8dbfff579daf2dc
     }
 }

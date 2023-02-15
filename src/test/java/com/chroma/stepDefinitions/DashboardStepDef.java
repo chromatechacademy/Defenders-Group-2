@@ -2,6 +2,7 @@ package com.chroma.stepDefinitions;
 
 import com.chroma.appsCommon.PageInitializer;
 import com.chroma.pages.DashboardPage;
+import com.chroma.stepsImplementation.DashboardStepImpl;
 import com.chroma.utils.ConfigReader;
 import com.chroma.web.CommonUtils;
 import cucumber.api.java.en.Then;
