@@ -15,7 +15,6 @@ public class DashboardStepDef extends PageInitializer {
 
     @Then("the following modules should displayed {string}, {string}, {string}, {string}, {string}, {string}, {string}, {string}")
     public void the_following_modules_should_displayed(String studentInformation, String feesCollection, String income,
-<<<<<<< HEAD
             String expences,
             String academics, String humanResource, String homework, String reports) {
         if (ConfigReader.getPropertyValue("browser").equalsIgnoreCase(("mobile"))) {
@@ -38,10 +37,5 @@ public class DashboardStepDef extends PageInitializer {
         String actualReportsModuleText = cTSMSNavigationModulesPage.reportsModule.getText();
         CommonUtils.assertEquals(actualReportsModuleText, reports);
         CommonUtils.nonMobileScreenshots();
-=======
-            String expences,String academics, String humanResource, String homework, String reports) {
-        DashboardStepImpl.userSeesModuleDisplayed(
-                studentInformation, feesCollection, income, expences, academics, humanResource, homework, reports);
->>>>>>> d37f4a0010f919e85f377489e8dbfff579daf2dc
     }
 }

@@ -517,4 +517,14 @@ public class CommonUtils extends WebDriverUtils {
 			e.printStackTrace();
 		}
 	}
+
+	/**
+	 * USE THIS METHOD TO TAKE SCREENSHOTSFOR NON MOBILE TESTING
+	 */
+	public static void nonMobileScreenshots() {
+		if (!ConfigReader.getPropertyValue("browser").equalsIgnoreCase(("mobile"))) {
+			CucumberLogUtils.logScreenShot();
+			CucumberLogUtils.logExtentScreenshot();
+		}
+	}
 }
