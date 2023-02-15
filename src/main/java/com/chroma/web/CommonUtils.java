@@ -19,6 +19,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import com.chroma.utils.ConfigReader;
+import com.chroma.utils.CucumberLogUtils;
 
 public class CommonUtils extends WebDriverUtils {
 
@@ -514,4 +516,24 @@ public class CommonUtils extends WebDriverUtils {
 			e.printStackTrace();
 		}
 	}
+
+	/**
+	 * Use this method to take screenshots - this mehtod will allow sauce labs to take screenshots 
+	 */
+	public static void nonMobileScreenshots(){
+		if(!ConfigReader.getPropertyValue("browser").equalsIgnoreCase("mobile")){
+			CucumberLogUtils.logExtentScreenshot();
+			CucumberLogUtils.logScreenShot();
+		}
+	}
+
+	/**
+	 * Use this method to handle alerts - this method will allow sauce labs to handle alerts 
+	 * for mobile testing
+	 */
+	 public static void nonMobileAutoAcceptAlert(){
+		if(!ConfigReader.getPropertyValue("browser").equalsIgnoreCase("mobile")){
+			CommonUtils.acceptAlert();
+		}
+	 }
 }
