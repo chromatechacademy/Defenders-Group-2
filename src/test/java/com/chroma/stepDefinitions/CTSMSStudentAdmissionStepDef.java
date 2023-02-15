@@ -93,15 +93,10 @@ public class CTSMSStudentAdmissionStepDef extends PageInitializer {
     }
 
     @Then("student is succesfuly saved and confirmation message is displayed {string}")
-<<<<<<< HEAD
     public void student_is_succesfuly_saved_and_confirmation_message_is_displayed(String expectedSuccessMessage) {
         String actualSuccessMessage = cTSMSStudentAdmissionPage.succesfulySavedMessage.getText();
         CommonUtils.nonMobileScreenshots();
         CommonUtils.assertEquals(actualSuccessMessage, expectedSuccessMessage);
-=======
-    public void student_is_succesfuly_saved_and_confirmation_message_is_displayed(String expectedSuccessMessage){
-        CTSMSStudentAdmissionStepImpl.studentSavedAndConfirmationMessage(expectedSuccessMessage);
->>>>>>> d37f4a0010f919e85f377489e8dbfff579daf2dc
     }
 
     @When("user navigates to Bulk Delete submodule")

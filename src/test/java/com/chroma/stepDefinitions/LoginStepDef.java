@@ -1,12 +1,8 @@
 package com.chroma.stepDefinitions;
 
 import com.chroma.appsCommon.PageInitializer;
-<<<<<<< HEAD
 import com.chroma.web.CommonUtils;
 import com.chroma.web.WebDriverUtils;
-=======
-import com.chroma.stepsImplementation.LoginStepImpl;
->>>>>>> d37f4a0010f919e85f377489e8dbfff579daf2dc
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
