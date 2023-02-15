@@ -1,6 +1,6 @@
 Feature: Real Estate - Login with Valid Credentials
 
-    @RealEstateProgression @Natalya @DG2-41
+    @RealEstateRegression @Natalya @DG2-41
     Scenario: Login with Valid Credentials
         Given a real estate admin is on the login page "https://chroma-tech-academy.mexil.it/chroma_real_estate/project_files/admin/login.php"
         And admin logs in with valid credentials email "admin@mexil.it" and password "123456"
@@ -9,4 +9,3 @@ Feature: Real Estate - Login with Valid Credentials
         Given admin is on the agent login page "https://chroma-tech-academy.mexil.it/chroma_real_estate/project_files/login.php"
         When admin logs in with valid credentials email "natalya@kray.com" and password "123456"
         Then admin is seccesfully loged in on Agent Real Estate web page "https://chroma-tech-academy.mexil.it/chroma_real_estate/project_files/index.php"
-        And admin logs out the Agent site

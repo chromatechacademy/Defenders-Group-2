@@ -11,4 +11,4 @@ Discription: Testing DashBoard Graph Text
     And Clicks the text "Agents Graph"
     And the graph should be displayed with header text "Reserved by Agents"
     And clicks on the text Overview
-    And the graph should be displayed with a header text "Properties Overview"
+    Then the graph should be displayed with a header text "Properties Overview"

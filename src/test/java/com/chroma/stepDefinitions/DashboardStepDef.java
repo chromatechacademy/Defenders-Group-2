@@ -1,30 +1,20 @@
 package com.chroma.stepDefinitions;
 
 import com.chroma.appsCommon.PageInitializer;
-import com.chroma.web.CommonUtils;
+import com.chroma.stepsImplementation.DashboardStepImpl;
 import cucumber.api.java.en.Then;
 
 public class DashboardStepDef extends PageInitializer {
+   
+    @Then("clicks on the hamburger menu")
+    public void clicks_on_the_hamburger_menu() {
+        DashboardStepImpl.userClicksHamburgerMenu();
+    }
 
     @Then("the following modules should displayed {string}, {string}, {string}, {string}, {string}, {string}, {string}, {string}")
     public void the_following_modules_should_displayed(String studentInformation, String feesCollection, String income,
-            String expences,
-            String academics, String humanResource, String homework, String reports) {
-        String actualStudentInfoText = cTSMSNavigationModulesPage.studentInformationModule.getText();
-        CommonUtils.assertEquals(actualStudentInfoText, studentInformation);
-        String actualFeesCollectionText = cTSMSNavigationModulesPage.feesCollectionModule.getText();
-        CommonUtils.assertEquals(actualFeesCollectionText, feesCollection);
-        String actualIncomeModuleText = cTSMSNavigationModulesPage.incomeModule.getText();
-        CommonUtils.assertEquals(actualIncomeModuleText, income);
-        String actualExpensesModulesText = cTSMSNavigationModulesPage.expensesModule.getText();
-        CommonUtils.assertEquals(actualExpensesModulesText, expences);
-        String actualacademicsModuleText = cTSMSNavigationModulesPage.academicsModule.getText();
-        CommonUtils.assertEquals(actualacademicsModuleText, academics);
-        String actualHumanResourceModuleText = cTSMSNavigationModulesPage.humanResourceModule.getText();
-        CommonUtils.assertEquals(actualHumanResourceModuleText, humanResource);
-        String actualHomeworkModuleText = cTSMSNavigationModulesPage.homeworkModule.getText();
-        CommonUtils.assertEquals(actualHomeworkModuleText, homework);
-        String actualReportsModuleText = cTSMSNavigationModulesPage.reportsModule.getText();
-        CommonUtils.assertEquals(actualReportsModuleText, reports);
+            String expences,String academics, String humanResource, String homework, String reports) {
+        DashboardStepImpl.userSeesModuleDisplayed(
+                studentInformation, feesCollection, income, expences, academics, humanResource, homework, reports);
     }
 }
